@@ -1,15 +1,12 @@
 <template>
     <main>
-        <nav>
-            <ul>
-                <li>スポーツ</li>
-                <li>数学・算数</li>
-                <li>科学</li>
-                <li>健康</li>
-                <li>日付</li>
-                <li>お金</li>
-            </ul>
-        </nav>
+        <div class="main-left">
+            
+        </div>
+
+        <div class="main-right">
+
+        </div>
     </main>
 </template>
 
@@ -22,9 +19,15 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 main {
     width: 1200px;
     margin: 0 auto;
+    .main-left {
+        width: 70%;
+    }
+    .main-right {
+        width: 30%;
+    }
 }
 </style>
