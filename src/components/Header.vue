@@ -7,7 +7,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav4">
             <ul class="navbar-nav">
-                <li>jlksadfkj</li>
+                <li><router-link to="/">HOME</router-link></li>
                 <li>jlksadfkj</li>
                 <li>jlksadfkj</li>
             </ul>
