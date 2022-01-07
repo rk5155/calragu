@@ -12,15 +12,18 @@ export default new Router({
   routes: [
     {
         path: '/',
-        component: Main
+        component: Main,
+        meta: { title: '【自動でいろいろ計算できるサイト】天才マンボウ', desc: 'aaaaa' }
     },
     {
         path: '/ops',
-        component: Ops
+        component: Ops,
+        meta: { title: '【現代野球の評価】OPSの計算', desc: 'ディスクリプションを記述' }
     },
     {
         path: '/page1',
-        component: Page1
+        component: Page1,
+        meta: { title: 'page1', desc: 'ディスクリプションを記述' }
     }
   ],
   //ページ遷移したときトップに移動かつ、ブラウザの戻るボタンを押したとき、もとの位置に戻る

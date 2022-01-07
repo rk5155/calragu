@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h2>OPS計算</h2>
+    <div class="calculation">
+        <h2>【現代野球の評価】OPSの計算</h2>
         <form>
             <div class="form-group" v-for="list in formList" :key="list.label">
                 <label for="formGroupExampleInput">{{ list.label }}</label>
@@ -79,9 +79,8 @@ export default {
           }
       },
       ops: function() {
-            console.log(typeof(this.sluggingPercentage));
-            let ops = Number(this.onBasePercentage) + Number(this.sluggingPercentage);
-            return ops.toFixed(3);
+          let ops = Number(this.onBasePercentage) + Number(this.sluggingPercentage);
+          return ops.toFixed(3);
       }
   }
 }

@@ -23,6 +23,29 @@ export default {
   components: {
     Header,
     MainRight
+  },
+  methods : {
+    setMeta(route){
+      // タイトルを設定
+      if(route.meta.title){
+        let setTitle = route.meta.title;
+        document.title = setTitle;
+      }
+      // ディスクリプションを設定
+      if(route.meta.desc){
+        let setDesc = route.meta.desc;
+        document.querySelector("meta[name='description']").setAttribute('content', setDesc)
+      }
+    }
+  },
+  mounted(){
+    let route = this.$route;
+    this.setMeta(route);
+  },
+  watch: { 
+    '$route' (route) {
+      this.setMeta(route);
+    }
   }
 }
 </script>
@@ -43,6 +66,10 @@ main {
     }
     .main-right {
         width: 26%;
+    }
+    .calculation {
+      background-color: #ffffff;
+      padding: 40px;
     }
 }
 </style>
