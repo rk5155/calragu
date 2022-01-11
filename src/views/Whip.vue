@@ -14,16 +14,10 @@
         <h2>計算結果</h2>
         <table class="table table-striped">
             <tr v-for="result in resultList" :key="result">
-                <td>{{ result }}</td>
+                <td>{{ result.label }}</td>
                 
-                <td v-if="result == 'WHIP'">{{ whip }}</td>
-                <td v-else-if="result == 1">素晴らしい</td>
-                <td v-else-if="result == 1.1">非常に良い</td>
-                <td v-else-if="result == 1.25">平均以上</td>
-                <td v-else-if="result == 1.32">平均</td>
-                <td v-else-if="result == 1.4">平均以下</td>
-                <td v-else-if="result == 1.5">悪い</td>
-                <td v-else-if="result == 1.6">非常に悪い</td>
+                <td v-if="result.label == 'WHIP'">{{ whip }}</td>
+                <td v-else>{{ result.text }}</td>
             </tr>
         </table>
     </div>
@@ -41,7 +35,16 @@ export default {
             { label: "被安打数", data: 'num2' },
             { label: "投球回数", data: 'num3' }
         ],
-      resultList: ["WHIP", 1, 1.1, 1.25, 1.32, 1.4, 1.5, 1.6]
+      resultList: [
+          { label: "WHIP" },
+          { label: 1, text: "素晴らしい" },
+          { label: 1.1, text: "非常に良い" },
+          { label: 1.25, text: "平均以上" },
+          { label: 1.32, text: "平均" },
+          { label: 1.4, text: "平均以下" },
+          { label: 1.5, text: "悪い" },
+          { label: 1.6, text: "非常に悪い" }
+        ]
     }
   },
   computed: {
