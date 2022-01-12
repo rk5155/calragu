@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Main from './views/Main.vue'
 import Ops from './views/Ops.vue'
 import Whip from './views/Whip.vue'
+import SluggingPercentage from './views/sports/SluggingPercentage.vue'
 import Page1 from './views/Page1.vue'
 
 
@@ -25,6 +26,11 @@ export default new Router({
       path: '/whip',
       component: Whip,
       meta: { title: '【現代野球の評価】OPSの計算', desc: 'ディスクリプションを記述' }
+    },
+    {
+      path: '/slugging-percentage',
+      component: SluggingPercentage,
+      meta: { title: '【現代野球の評価】長打率の計算', desc: 'ディスクリプションを記述' }
     },
     {
         path: '/page1',
