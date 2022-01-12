@@ -1,6 +1,6 @@
 <template>
     <div class="calculation">
-        <h2>WHIPの計算</h2>
+        <h1>WHIPの計算</h1>
         <p>WHIP = 与四球数 + 被安打数 ÷ 投球回数</p>
         <p>1イニングあたりに何人の走者を出しているかを算出しています。</p>
 
