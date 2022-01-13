@@ -1,6 +1,6 @@
 <template>
     <div class="calculation">
-        <h1>WHIPの計算</h1>
+        <h1>{{ title }}</h1>
         <p>WHIP = 与四球数 + 被安打数 ÷ 投球回数</p>
         <p>1イニングあたりに何人の走者を出しているかを算出しています。</p>
 
@@ -32,7 +32,7 @@ export default {
       num1: 0,
       num2: 0,
       num3: 0,
-      message: "",
+      title: "",
       formList: [
             { label: "与四球数", data: 'num1' },
             { label: "被安打数", data: 'num2' },
@@ -101,8 +101,20 @@ export default {
               el.style.backgroundColor = '#F2F5A9';
           })
        
+       },
+       setMeta(route){
+           this.title = route.meta.title
        }
   },
+  mounted() {
+      let route = this.$route;
+      this.setMeta(route);
+  },
+  watch: { 
+      '$route' (route) {
+      this.setMeta(route);
+    }
+  }
 }
 </script>
 
