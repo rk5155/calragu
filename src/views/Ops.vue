@@ -5,10 +5,7 @@
         <p>現代野球でＯＰＳは得点相関と関係性が高く、ＯＰＳが高い打者は優秀だとされています。</p>
 
         <form>
-            <div class="form-group" v-for="list in formList" :key="list.label">
-                <label for="formGroupExampleInput">{{ list.label }}</label>
-                <input v-model.number="$data[list.data]" type="number" min="0" max="1000" step="1" class="form-control">
-            </div>
+            <Calculation v-for="list in formList" :key="list.label" :list="list" v-model.number="$data[list.data]"></Calculation>
         </form>
 
         <h2>計算結果</h2>
@@ -27,7 +24,11 @@
 </template>
 
 <script>
+import Calculation from "../components/Calculation.vue"
 export default {
+  components: {
+    Calculation,
+  },
   data () {
     return {
       bat: 0,

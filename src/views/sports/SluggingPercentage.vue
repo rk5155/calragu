@@ -5,10 +5,7 @@
         <p>長打率とは、1打数あたりの塁打数の平均値を表します。塁打とは、「単打＝1、二塁打＝2、三塁打＝3、本塁打＝4」として計算します。1打数1安打1本塁打の選手は、塁打数の4を打数の1で割るので、長打率4.000となるわけです。</p>
 
         <form>
-            <div class="form-group" v-for="list in formList" :key="list.label">
-                <label for="formGroupExampleInput">{{ list.label }}</label>
-                <input v-model.number="$data[list.data]" type="number" min="0" max="1000" step="1" class="form-control">
-            </div>
+            <Calculation v-for="list in formList" :key="list.label" :list="list" v-model.number="$data[list.data]"></Calculation>
         </form>
 
         <h2>計算結果</h2>
@@ -25,7 +22,12 @@
     </div>
 </template>
 <script>
+import Calculation from "../../components/Calculation.vue"
+
 export default {
+  components: {
+    Calculation,
+  },
   data () {
     return {
       bat: 0,

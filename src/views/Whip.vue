@@ -5,10 +5,7 @@
         <p>1イニングあたりに何人の走者を出しているかを算出しています。</p>
 
         <form>
-            <div class="form-group" v-for="list in formList" :key="list.label">
-                <label for="formGroupExampleInput">{{ list.label }}</label>
-                <input v-model.number="$data[list.data]" type="number" min="0" max="1000" step="1" class="form-control">
-            </div>
+            <Calculation v-for="list in formList" :key="list.label" :list="list" v-model.number="$data[list.data]"></Calculation>
         </form>
 
         <h2>計算結果</h2>
@@ -24,12 +21,18 @@
 </template>
 
 <script>
+import Calculation from "../components/Calculation.vue"
+
 export default {
+  components: {
+    Calculation,
+  },
   data () {
     return {
       num1: 0,
       num2: 0,
       num3: 0,
+      message: "",
       formList: [
             { label: "与四球数", data: 'num1' },
             { label: "被安打数", data: 'num2' },
