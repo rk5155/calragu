@@ -18,6 +18,7 @@
 <script>
 import Header from './components/Header.vue'
 import MainRight from './components/MainRight.vue'
+import 'normalize.css'
 
 export default {
   components: {
