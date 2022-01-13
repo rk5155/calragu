@@ -20,6 +20,10 @@ export default {
   a {
     color: #333;
   }
+  h1, p {
+    margin: 0;
+    font-size: 20px;
+  }
 }
 </style>>
 
