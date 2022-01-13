@@ -1,6 +1,6 @@
 <template>
     <div class="calculation">
-        <h1>【現代野球の評価】OPSの計算</h1>
+        <h1>{{ title }}</h1>
         <p>【出塁率】＋【長打率】＝【ＯＰＳ】</p>
         <p>現代野球でＯＰＳは得点相関と関係性が高く、ＯＰＳが高い打者は優秀だとされています。</p>
 
@@ -25,10 +25,13 @@
 
 <script>
 import Calculation from "../components/Calculation.vue"
+import getTitle from '@/getTitle'
+
 export default {
   components: {
     Calculation,
   },
+  mixins: [ getTitle ],
   data () {
     return {
       bat: 0,

@@ -1,6 +1,6 @@
 <template>
     <div class="calculation">
-        <h1>長打率の計算</h1>
+        <h1>{{ title }}</h1>
         <p>長打率 = 塁打数 ÷ 打数</p>
         <p>長打率とは、1打数あたりの塁打数の平均値を表します。塁打とは、「単打＝1、二塁打＝2、三塁打＝3、本塁打＝4」として計算します。1打数1安打1本塁打の選手は、塁打数の4を打数の1で割るので、長打率4.000となるわけです。</p>
 
@@ -23,11 +23,13 @@
 </template>
 <script>
 import Calculation from "../../components/Calculation.vue"
+import getTitle from '@/getTitle'
 
 export default {
   components: {
     Calculation,
   },
+  mixins: [ getTitle ],
   data () {
     return {
       bat: 0,

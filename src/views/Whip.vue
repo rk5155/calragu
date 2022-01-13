@@ -22,17 +22,18 @@
 
 <script>
 import Calculation from "../components/Calculation.vue"
+import getTitle from '@/getTitle'
 
 export default {
   components: {
     Calculation,
   },
+  mixins: [ getTitle ],
   data () {
     return {
       num1: 0,
       num2: 0,
       num3: 0,
-      title: "",
       formList: [
             { label: "与四球数", data: 'num1' },
             { label: "被安打数", data: 'num2' },
@@ -101,19 +102,7 @@ export default {
               el.style.backgroundColor = '#F2F5A9';
           })
        
-       },
-       setMeta(route){
-           this.title = route.meta.title
        }
-  },
-  mounted() {
-      let route = this.$route;
-      this.setMeta(route);
-  },
-  watch: { 
-      '$route' (route) {
-      this.setMeta(route);
-    }
   }
 }
 </script>
