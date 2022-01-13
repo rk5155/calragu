@@ -25,7 +25,7 @@ export default new Router({
     {
       path: '/whip',
       component: Whip,
-      meta: { title: '【現代野球の評価】OPSの計算', desc: 'ディスクリプションを記述' }
+      meta: { title: '【現代野球の投手評価】WHIPの計算', desc: 'ディスクリプションを記述' }
     },
     {
       path: '/slugging-percentage',
