@@ -2,11 +2,13 @@ export default {
     data () {
         return {
             title: '',
+            path: ''
         }
     },
     methods: {
         setMeta(route){
             this.title = route.meta.title
+            this.path = route.path
         }
     },
     mounted() {
