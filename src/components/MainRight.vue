@@ -3,7 +3,7 @@
         <div class="main-right-block">
             <h3 class="main-right-block__title">新着記事</h3>
 
-            <div class="main-right-articles" v-for="article in articles.slice(-6)" :key="article.title">
+            <div class="main-right-articles" v-for="article in newArticle.slice(-6)" :key="article.title">
                 <router-link :to="article.url">
                     <span class="main-right-articles__category">{{ article.category }}</span>
                     <h4>{{ article.title }}</h4>

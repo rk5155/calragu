@@ -8,8 +8,8 @@
 
             <div class="article-list">
 
-                <template v-for="article in articles">
-                    <router-link class="card" :to="article.url" :key="article.title" v-if="isActive == article.category">
+                <template v-if="isActive == 'スポーツ'">
+                    <router-link class="card" v-for="article in sports" :to="article.url" :key="article.title">
                         <article>
                             <img class="card-img-top" :src="article.img" alt="Card image cap">
                             <div class="card-body">
@@ -17,7 +17,61 @@
                             </div>    
                         </article>
                     </router-link>
-                    
+                </template>
+
+                <template v-else-if="isActive == '健康'">
+                    <router-link class="card" v-for="article in health" :to="article.url" :key="article.title">
+                        <article>
+                            <img class="card-img-top" :src="article.img" alt="Card image cap">
+                            <div class="card-body">
+                                <h2 class="card-text">{{ article.title }}</h2>
+                            </div>    
+                        </article>
+                    </router-link>
+                </template>
+
+                <template v-else-if="isActive == 'お金'">
+                    <router-link class="card" v-for="article in money" :to="article.url" :key="article.title">
+                        <article>
+                            <img class="card-img-top" :src="article.img" alt="Card image cap">
+                            <div class="card-body">
+                                <h2 class="card-text">{{ article.title }}</h2>
+                            </div>    
+                        </article>
+                    </router-link>
+                </template>
+
+                <template v-else-if="isActive == '数学・算数'">
+                    <router-link class="card" v-for="article in arithmetic" :to="article.url" :key="article.title">
+                        <article>
+                            <img class="card-img-top" :src="article.img" alt="Card image cap">
+                            <div class="card-body">
+                                <h2 class="card-text">{{ article.title }}</h2>
+                            </div>    
+                        </article>
+                    </router-link>
+                </template>
+
+                <template v-else-if="isActive == '科学'">
+                    <router-link class="card" v-for="article in science" :to="article.url" :key="article.title">
+                        <article>
+                            <img class="card-img-top" :src="article.img" alt="Card image cap">
+                            <div class="card-body">
+                                <h2 class="card-text">{{ article.title }}</h2>
+                            </div>    
+                        </article>
+                    </router-link>
+                </template>
+
+                <template v-else-if="isActive == '日付'">
+                    <router-link class="card" v-for="article in date" :to="article.url" :key="article.title">
+                        <article>
+                            <img class="card-img-top" :src="article.img" alt="Card image cap">
+                            <div class="card-body">
+                                <h2 class="card-text">{{ article.title }}</h2>
+                            </div>    
+                        </article>
+                    </router-link>
                 </template>
                 
 
