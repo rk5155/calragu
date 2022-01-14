@@ -4,6 +4,7 @@ import Main from './views/Main.vue'
 import Ops from './views/Ops.vue'
 import Whip from './views/Whip.vue'
 import SluggingPercentage from './views/sports/SluggingPercentage.vue'
+import BasePercentage from './views/sports/BasePercentage.vue'
 import Page1 from './views/Page1.vue'
 
 
@@ -31,6 +32,11 @@ export default new Router({
       path: '/slugging-percentage',
       component: SluggingPercentage,
       meta: { title: '【現代野球の評価】長打率の計算', desc: 'ディスクリプションを記述' }
+    },
+    {
+      path: '/base-percentage',
+      component: BasePercentage,
+      meta: { title: '【野球の評価】打率、出塁率の計算', desc: 'ディスクリプションを記述' }
     },
     {
         path: '/page1',
