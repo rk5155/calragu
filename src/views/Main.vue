@@ -7,87 +7,59 @@
             </nav>
 
             <div class="article-list">
-
                 <template v-if="isActive == 'スポーツ'">
                     <router-link class="card" v-for="article in sports" :to="article.url" :key="article.title">
-                        <article>
-                            <img class="card-img-top" :src="article.img" alt="Card image cap">
-                            <div class="card-body">
-                                <h2 class="card-text">{{ article.title }}</h2>
-                            </div>    
-                        </article>
+                        <Article :article="article"></Article>
                     </router-link>
                 </template>
 
                 <template v-else-if="isActive == '健康'">
                     <router-link class="card" v-for="article in health" :to="article.url" :key="article.title">
-                        <article>
-                            <img class="card-img-top" :src="article.img" alt="Card image cap">
-                            <div class="card-body">
-                                <h2 class="card-text">{{ article.title }}</h2>
-                            </div>    
-                        </article>
+                        <Article :article="article"></Article>
                     </router-link>
                 </template>
 
                 <template v-else-if="isActive == 'お金'">
                     <router-link class="card" v-for="article in money" :to="article.url" :key="article.title">
-                        <article>
-                            <img class="card-img-top" :src="article.img" alt="Card image cap">
-                            <div class="card-body">
-                                <h2 class="card-text">{{ article.title }}</h2>
-                            </div>    
-                        </article>
+                        <Article :article="article"></Article>
                     </router-link>
                 </template>
 
                 <template v-else-if="isActive == '数学・算数'">
                     <router-link class="card" v-for="article in arithmetic" :to="article.url" :key="article.title">
-                        <article>
-                            <img class="card-img-top" :src="article.img" alt="Card image cap">
-                            <div class="card-body">
-                                <h2 class="card-text">{{ article.title }}</h2>
-                            </div>    
-                        </article>
+                        <Article :article="article"></Article>
                     </router-link>
                 </template>
 
                 <template v-else-if="isActive == '科学'">
                     <router-link class="card" v-for="article in science" :to="article.url" :key="article.title">
-                        <article>
-                            <img class="card-img-top" :src="article.img" alt="Card image cap">
-                            <div class="card-body">
-                                <h2 class="card-text">{{ article.title }}</h2>
-                            </div>    
-                        </article>
+                        <Article :article="article"></Article>
                     </router-link>
                 </template>
 
                 <template v-else-if="isActive == '日付'">
                     <router-link class="card" v-for="article in date" :to="article.url" :key="article.title">
-                        <article>
-                            <img class="card-img-top" :src="article.img" alt="Card image cap">
-                            <div class="card-body">
-                                <h2 class="card-text">{{ article.title }}</h2>
-                            </div>    
-                        </article>
+                        <Article :article="article"></Article>
                     </router-link>
                 </template>
-                
-
             </div>
         </div>
 </template>
 
 <script>
 import articles from '@/mixins/articles.js'
+import Article from "../components/Article.vue"
 
 export default {
   mixins: [ articles ],
+  components: {
+      Article
+  },
+
   methods: {
-        isSelect: function (category) {
-            this.isActive = category;
-        }
+      isSelect: function (category) {
+          this.isActive = category;
+      }
   },
   computed: {
         
@@ -109,38 +81,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.article-list {
-    display: flex;
-    flex-wrap: wrap;
-    h2 {
-        font-size: 18px;
-        color: #333333;
-        font-weight: bold;
-    }
-    a {
-        margin-bottom: 12px;
-        width: calc((100% - 12px) / 2);
-        padding: 12px;
-        border: none;
-        box-shadow: 0 0 3px 0 rgba(0,0,0,.12), 0 2px 3px 0 rgba(0,0,0,.22);
-        transition: .3s;
-        &:hover {
-            box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
-            transform: translateY(-4px);
-        }
-        &:nth-child(odd) {
-            margin-right: 12px;
-        }
-        .card-body {
-            padding: 0;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-    }
-    .card {
-        height: 264px;
-    }
-}
 ul {
     display: flex;
     flex-wrap: wrap;
