@@ -12,75 +12,58 @@
         </div>
         <div class="main-right-block--white">
             <h3 class="main-right-block__title">カテゴリー</h3>
+            <Category></Category>
 
             <div class="main-right-block-wrapper">
-                <h4 class="main-right-block__h4">スポーツ</h4>
-                <ul>
-                    <li v-for="el in sports" :key="el.title">
-                        <router-link :to="el.url">{{ el.title }}</router-link>
-                    </li>
-                </ul>
-                
-                <h4 class="main-right-block__h4">健康</h4>
-                <ul>
-                    <li>
-                        <router-link to="">健康</router-link>
-                    </li>
-                </ul>
-
-                <h4 class="main-right-block__h4">お金</h4>
-                <ul>
-                    <li>
-                        <router-link to="">お金</router-link>
-                    </li>
-                </ul>
-
-                <h4 class="main-right-block__h4">数学・算数</h4>
-                <ul>
-                    <li>
-                        <router-link to="">数学・算数</router-link>
-                    </li>
-                </ul>
-
-                <h4 class="main-right-block__h4">科学</h4>
-                <ul>
-                    <li>
-                        <router-link to="">科学</router-link>
-                    </li>
-                </ul>
-
-                <h4 class="main-right-block__h4">日付</h4>
-                <ul>
-                    <li>
-                        <router-link to="">日付</router-link>
-                    </li>
-                </ul>
+                <Category :categorys="sports" title="スポーツ"></Category>
+                <Category :categorys="health" title="健康"></Category>
+                <Category :categorys="money" title="お金"></Category>
+                <Category :categorys="arithmetic" title="数学・算数"></Category>
+                <Category :categorys="science" title="科学"></Category>
+                <Category :categorys="date" title="日付"></Category>
             </div>
-
-            
         </div>
     </div>
 </template>
 
 <script>
 import articles from '@/mixins/articles.js'
+import Category from "../components/Category.vue"
+
 export default {
     mixins: [ articles ],
     data() {
         return {
-            categorys: [],
             sports: [
                 { title: "野球", url: "/baseball" },
                 { title: "サッカー", url: "/soccer" },
                 { title: "バスケ", url: "/basket" },
                 { title: "アメフト", url: "/" },
+            ],
+            health: [
+                { title: "健康", url: "/" },
+            ],
+            science: [
+                { title: "数学・算数", url: "/" },
+            ],
+            money: [
+                { title: "お金", url: "/" },
+            ],
+            arithmetic: [
+                { title: "科学", url: "/" },
+            ],
+            date: [
+                { title: "日付", url: "/" },
             ]
         }
-    }
+    },
+    components: {
+                Category,
+    },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .main-right-block {
 }
 .main-right-block-wrapper {
