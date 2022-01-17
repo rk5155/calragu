@@ -10,8 +10,53 @@
                 </router-link>
             </div>
         </div>
-        <div class="main-right-block">
+        <div class="main-right-block--white">
             <h3 class="main-right-block__title">カテゴリー</h3>
+
+            <div class="main-right-block-wrapper">
+                <h4 class="main-right-block__h4">スポーツ</h4>
+                <ul>
+                    <li v-for="el in sports" :key="el.title">
+                        <router-link :to="el.url">{{ el.title }}</router-link>
+                    </li>
+                </ul>
+                
+                <h4 class="main-right-block__h4">健康</h4>
+                <ul>
+                    <li>
+                        <router-link to="">健康</router-link>
+                    </li>
+                </ul>
+
+                <h4 class="main-right-block__h4">お金</h4>
+                <ul>
+                    <li>
+                        <router-link to="">お金</router-link>
+                    </li>
+                </ul>
+
+                <h4 class="main-right-block__h4">数学・算数</h4>
+                <ul>
+                    <li>
+                        <router-link to="">数学・算数</router-link>
+                    </li>
+                </ul>
+
+                <h4 class="main-right-block__h4">科学</h4>
+                <ul>
+                    <li>
+                        <router-link to="">科学</router-link>
+                    </li>
+                </ul>
+
+                <h4 class="main-right-block__h4">日付</h4>
+                <ul>
+                    <li>
+                        <router-link to="">日付</router-link>
+                    </li>
+                </ul>
+            </div>
+
             
         </div>
     </div>
@@ -21,12 +66,58 @@
 import articles from '@/mixins/articles.js'
 export default {
     mixins: [ articles ],
+    data() {
+        return {
+            categorys: [],
+            sports: [
+                { title: "野球", url: "/baseball" },
+                { title: "サッカー", url: "/soccer" },
+                { title: "バスケ", url: "/basket" },
+                { title: "アメフト", url: "/" },
+            ]
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 .main-right-block {
-    // background-color: #ffffff;
+}
+.main-right-block-wrapper {
+    padding: 14px;
+    ul {
+        margin-bottom: 20px;
+        padding-left: 20px;
+    }
+    li {
+        position: relative;
+        padding-left: 14px;
+        color: #333;
+        text-decoration: none;
+        list-style: none;
+        &::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 0 6px 8px;
+            border-color: transparent transparent transparent #8a8a8a;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -6px;
+        }
+    }
+    a {
+        color: #8a8a8a;
+    }
+}
+.main-right-block__h4 {
+    font-size: 16px;
+    font-weight: bold;
+}
+.main-right-block--white {
+    background-color: #ffffff;
 }
 .main-right-block__title {
     background-color: $mainColor;
