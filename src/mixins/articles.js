@@ -1,6 +1,8 @@
 export default {
     data () {
         return {
+            keyword: "",
+            articles: [],
             newArticle: [
                 { title: "【現代野球の評価】OPSの計算", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "スポーツ", url: "/ops" },
                 { title: "WHIPの計算", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "スポーツ", url: "/whip" },
@@ -32,8 +34,42 @@ export default {
                 { title: "タイトルタイトル11", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "日付", url: "" },
                 { title: "タイトルタイトル11", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "日付", url: "" },
             ],
-
-
         }
-    }
+    },
+    computed: {
+        searchArticle: function() {            
+            this.sports.forEach(el => {
+                this.pushArticle(el);
+            });
+            this.health.forEach(el => {
+                this.pushArticle(el);
+            });
+            this.money.forEach(el => {
+                this.pushArticle(el);
+            });
+            this.arithmetic.forEach(el => {
+                this.pushArticle(el);
+            });
+            this.science.forEach(el => {
+                this.pushArticle(el);
+            });
+            this.date.forEach(el => {
+                this.pushArticle(el);
+            });
+            // 重複を削除
+            this.articles = this.articles.filter(function (x, i, self) {
+                return self.indexOf(x) === i;
+            });
+            return this.articles
+        }
+    },
+    methods: {
+        pushArticle: function(el) {
+            if (el.title.toLowerCase().includes(this.keyword.toLowerCase()) && this.keyword) {
+                this.articles.push(el)
+            } else if(!this.keyword) {
+                this.articles = [];
+            }
+        }
+    },
 }
