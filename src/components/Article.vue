@@ -1,6 +1,8 @@
 <template>
     <article>
-        <img class="card-img-top" :src="article.img" alt="Card image cap">
+        <div class="img-background">
+            <img class="card-img-top" :src="article.img" alt="Card image cap">
+        </div>
         <div class="card-body">
             <h2 class="card-text">{{ article.title }}</h2>
         </div>    
@@ -44,6 +46,16 @@ export default {
     }
     .card {
         height: 264px;
+    }
+    .img-background {
+        background-color: #C8E6FF;
+        width: 100%;
+        height: 170px;
+        text-align: center;
+    }
+    img {
+        width: auto;
+        height: 170px;
     }
 }
 </style>
