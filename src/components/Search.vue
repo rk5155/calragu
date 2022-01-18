@@ -1,7 +1,7 @@
 <template>
     <form class="searchForm">
         <input  v-model="inputedValue" type="search" class="text" placeholder="">
-        <button type="submit" value="検索"><img src="https://drive.google.com/uc?export=view&id=14qL6YD2g-JNNp6ClYdNpiVjZDAGp3eaL" alt=""></button>
+        <button type="button" value="検索"><img src="https://drive.google.com/uc?export=view&id=14qL6YD2g-JNNp6ClYdNpiVjZDAGp3eaL" alt=""></button>
     </form>
 </template>
 
@@ -57,7 +57,7 @@ $breakpoints: (
       font-size: 1.8rem;
     }
   }
-  & button[type="submit"] {
+  & button[type="button"] {
     border: none;
     border-left: none;
     padding: 0;
