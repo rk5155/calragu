@@ -1,60 +1,60 @@
 <template>
-        <div>
-            <Search v-model="keyword"></Search>
-            <nav v-show="!keyword">
-                <ul>
-                    <template v-for="nav in navList">
-                        <li v-if="nav.category == 'スポーツ'" class="is-select" :key="nav.id" @click="noSelect(), isSelect(nav.category, $event)">{{ nav.category }}</li>
-                        <li v-else :key="nav.id" @click="noSelect(), isSelect(nav.category, $event)">{{ nav.category }}</li>
-                    </template>
-                </ul>
-            </nav>
-
-            <div class="article-list">
-                
-                <template v-if="isActive == 'スポーツ' && searchArticle.length == 0">
-                    <router-link class="card" v-for="article in sports" :to="article.url" :key="article.title">
-                        <Article :article="article"></Article>
-                    </router-link>
+    <div>
+        <Search v-model="keyword"></Search>
+        <nav v-show="!keyword">
+            <ul>
+                <template v-for="nav in navList">
+                    <li v-if="nav.category == 'スポーツ'" class="is-select" :key="nav.id" @click="noSelect(), isSelect(nav.category, $event)">{{ nav.category }}</li>
+                    <li v-else :key="nav.id" @click="noSelect(), isSelect(nav.category, $event)">{{ nav.category }}</li>
                 </template>
+            </ul>
+        </nav>
 
-                <template v-else-if="isActive == '健康' && searchArticle.length == 0">
-                    <router-link class="card" v-for="article in health" :to="article.url" :key="article.title">
-                        <Article :article="article"></Article>
-                    </router-link>
-                </template>
+        <div class="article-list">
+            
+            <template v-if="isActive == 'スポーツ' && searchArticle.length == 0">
+                <router-link class="card" v-for="article in sports" :to="article.url" :key="article.title">
+                    <Article :article="article"></Article>
+                </router-link>
+            </template>
 
-                <template v-else-if="isActive == 'お金' && searchArticle.length == 0">
-                    <router-link class="card" v-for="article in money" :to="article.url" :key="article.title">
-                        <Article :article="article"></Article>
-                    </router-link>
-                </template>
+            <template v-else-if="isActive == '健康' && searchArticle.length == 0">
+                <router-link class="card" v-for="article in health" :to="article.url" :key="article.title">
+                    <Article :article="article"></Article>
+                </router-link>
+            </template>
 
-                <template v-else-if="isActive == '数学・算数' && searchArticle.length == 0">
-                    <router-link class="card" v-for="article in arithmetic" :to="article.url" :key="article.title">
-                        <Article :article="article"></Article>
-                    </router-link>
-                </template>
+            <template v-else-if="isActive == 'お金' && searchArticle.length == 0">
+                <router-link class="card" v-for="article in money" :to="article.url" :key="article.title">
+                    <Article :article="article"></Article>
+                </router-link>
+            </template>
 
-                <template v-else-if="isActive == '科学' && searchArticle.length == 0">
-                    <router-link class="card" v-for="article in science" :to="article.url" :key="article.title">
-                        <Article :article="article"></Article>
-                    </router-link>
-                </template>
+            <template v-else-if="isActive == '数学・算数' && searchArticle.length == 0">
+                <router-link class="card" v-for="article in arithmetic" :to="article.url" :key="article.title">
+                    <Article :article="article"></Article>
+                </router-link>
+            </template>
 
-                <template v-else-if="isActive == '日付' && searchArticle.length == 0">
-                    <router-link class="card" v-for="article in date" :to="article.url" :key="article.title">
-                        <Article :article="article"></Article>
-                    </router-link>
-                </template>
+            <template v-else-if="isActive == '科学' && searchArticle.length == 0">
+                <router-link class="card" v-for="article in science" :to="article.url" :key="article.title">
+                    <Article :article="article"></Article>
+                </router-link>
+            </template>
 
-                <template v-else-if="searchArticle.length != 0">
-                    <router-link class="card" v-for="article in searchArticle" :to="article.url" :key="article.title">
-                        <Article :article="article"></Article>
-                    </router-link>
-                </template>
-            </div>
+            <template v-else-if="isActive == '日付' && searchArticle.length == 0">
+                <router-link class="card" v-for="article in date" :to="article.url" :key="article.title">
+                    <Article :article="article"></Article>
+                </router-link>
+            </template>
+
+            <template v-else-if="searchArticle.length != 0">
+                <router-link class="card" v-for="article in searchArticle" :to="article.url" :key="article.title">
+                    <Article :article="article"></Article>
+                </router-link>
+            </template>
         </div>
+    </div>
 </template>
 
 <script>
