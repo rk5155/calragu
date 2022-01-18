@@ -5,6 +5,7 @@ import Ops from './views/Ops.vue'
 import Whip from './views/Whip.vue'
 import SluggingPercentage from './views/sports/SluggingPercentage.vue'
 import BasePercentage from './views/sports/BasePercentage.vue'
+import Baseball from './views/sports/Baseball.vue'
 import Page1 from './views/Page1.vue'
 
 
@@ -17,6 +18,11 @@ export default new Router({
         path: '/',
         component: Main,
         meta: { title: '【自動でいろいろ計算できるサイト】天才マンボウ', desc: 'aaaaa' }
+    },
+    {
+      path: '/baseball',
+      component: Baseball,
+      meta: { title: '野球の計算', desc: 'aaaaa' }
     },
     {
         path: '/ops',

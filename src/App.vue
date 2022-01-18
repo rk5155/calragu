@@ -3,14 +3,18 @@
     <Header></Header>
 
     <main id="main">
-      <div class="main-wrapper">
 
+      <div v-if="path == '/baseball'" id="content">
+        <router-view></router-view>
+      </div>
+      
+      <div v-else class="main-wrapper">
         <div class="main-left">
           <router-view></router-view>
         </div>
-
         <MainRight></MainRight>
       </div>
+
     </main>
   </div>
 </template>
@@ -18,6 +22,7 @@
 <script>
 import Header from './components/Header.vue'
 import MainRight from './components/MainRight.vue'
+import getTitle from '@/getTitle'
 import 'normalize.css'
 
 export default {
@@ -25,6 +30,7 @@ export default {
     Header,
     MainRight
   },
+  mixins: [ getTitle ],
   methods : {
     setMeta(route){
       // タイトルを設定

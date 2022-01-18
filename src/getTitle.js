@@ -6,18 +6,18 @@ export default {
         }
     },
     methods: {
-        setMeta(route){
+        getMeta(route){
             this.title = route.meta.title
             this.path = route.path
         }
     },
     mounted() {
         let route = this.$route;
-        this.setMeta(route);
+        this.getMeta(route);
     },
     watch: { 
         '$route' (route) {
-        this.setMeta(route);
+        this.getMeta(route);
       }
     }
 }
