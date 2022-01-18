@@ -1,9 +1,12 @@
 <template>
         <div>
             <Search v-model="keyword"></Search>
-            <nav v-if="!keyword">
+            <nav v-show="!keyword">
                 <ul>
-                    <li v-for="nav in navList" :key="nav.id" @click="isSelect(nav.category)">{{ nav.category }}</li>
+                    <template v-for="nav in navList">
+                        <li v-if="nav.category == 'スポーツ'" class="is-select" :key="nav.id" @click="noSelect(), isSelect(nav.category, $event)">{{ nav.category }}</li>
+                        <li v-else :key="nav.id" @click="noSelect(), isSelect(nav.category, $event)">{{ nav.category }}</li>
+                    </template>
                 </ul>
             </nav>
 
@@ -65,14 +68,17 @@ export default {
       Article,
       Search
   },
-
   methods: {
-      isSelect: function (category) {
+      isSelect: function (category, event) {
           this.isActive = category;
+          event.target.classList.add('is-select');
+      },
+      noSelect: function() {
+          let isSleect = document.querySelector(".is-select");
+          if (isSleect) {
+              document.querySelector(".is-select").classList.remove("is-select");    
+          }
       }
-  },
-  computed: {
-        
   },
   data() {
       return {
@@ -91,6 +97,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.is-select {
+    border-bottom: 2px solid $mainColor;
+    color: $textColor;
+}
 ul {
     display: flex;
     flex-wrap: wrap;
@@ -104,5 +114,7 @@ li {
     text-align: center;
     padding: 4px 0;
     border: 1px solid $bodyColor;
+    font-weight: bold;
+    color: $textColor2;
 }
 </style>
