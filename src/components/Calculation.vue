@@ -5,20 +5,10 @@
     </div>
 </template>
 <script>
-// import { calculatedValue } from '@/calculatedValue.js'
+import inputedValue from '@/mixins/inputedValue.js'
 
 export default {
-    // mixins: [ calculatedValue ],
-    props: ["list", "value"],
-    computed: {
-        inputedValue: {
-            get() {
-                return this.value;
-            },
-            set(newValue) {
-                this.$emit("input", newValue);
-            }
-        }
-    }
+    mixins: [ inputedValue ],
+    props: ["list", "value"]
 }
 </script>

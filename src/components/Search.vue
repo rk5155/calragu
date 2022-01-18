@@ -6,17 +6,10 @@
 </template>
 
 <script>
+import inputedValue from '@/mixins/inputedValue.js'
+
 export default {
-    computed: {
-        inputedValue: {
-            get() {
-                return this.value;
-            },
-            set(newValue) {
-                this.$emit("input", newValue);
-            }
-        }
-    }
+    mixins: [ inputedValue ]
 }
 </script>
 
