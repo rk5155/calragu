@@ -12,7 +12,7 @@
                 <router-link v-if="el.subcategory == '野球'" :key="el.title" :to="el.url" >
                     <article class="card">
                         <div class="row g-0">
-                            <div class="img-background">
+                            <div :class="el.color">
                                 <img :src="el.img" alt="">
                             </div>
                             <div class="col-md-8">
@@ -64,9 +64,16 @@ export default {
             margin: 10px;
         }
         .img-background {
-            background-color: #C8E6FF;
-            width: 120px;
-            height: 120px;
+            @include imgBackgroundContent(#C8E6FF); 
+        }
+        .img-background--blue {
+            @include imgBackgroundContent(#8DD7F7); 
+        }
+        .img-background--beige {
+            @include imgBackgroundContent(#FCEFDF); 
+        }
+        .img-background--red {
+            @include imgBackgroundContent(#FD938E); 
         }
         .col-md-8 {
             display: flex;

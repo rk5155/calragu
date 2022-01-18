@@ -2,3 +2,15 @@ $bodyColor: #EDF2FD;
 $mainColor: #616DFA;
 $textColor: #333333;
 $textColor2: #8a8a8a;
+
+@mixin imgBackground($color) {
+    background-color: $color;
+    width: 100%;
+    height: 170px;
+    text-align: center;
+}
+@mixin imgBackgroundContent($color) {
+    background-color: $color;
+    width: 120px;
+    height: 120px;
+}

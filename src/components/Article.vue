@@ -1,6 +1,6 @@
 <template>
     <article>
-        <div class="img-background">
+        <div :class="article.color">
             <img class="card-img-top" :src="article.img" alt="Card image cap">
         </div>
         <div class="card-body">
@@ -48,11 +48,18 @@ export default {
         height: 264px;
     }
     .img-background {
-        background-color: #C8E6FF;
-        width: 100%;
-        height: 170px;
-        text-align: center;
+        @include imgBackground(#C8E6FF); 
     }
+    .img-background--blue {
+        @include imgBackground(#8DD7F7); 
+    }
+    .img-background--beige {
+        @include imgBackground(#FCEFDF); 
+    }
+    .img-background--red {
+        @include imgBackground(#FD938E); 
+    }
+    
     img {
         width: auto;
         height: 170px;
