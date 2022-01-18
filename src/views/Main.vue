@@ -1,12 +1,11 @@
 <template>
         <div>
+            <Search v-model="keyword"></Search>
             <nav>
                 <ul>
                     <li v-for="nav in navList" :key="nav.id" @click="isSelect(nav.category)">{{ nav.category }}</li>
                 </ul>
             </nav>
-            <h3>検索</h3>
-            <input v-model="keyword" placeholder="">
 
             <div class="article-list">
                 
@@ -58,11 +57,13 @@
 <script>
 import articles from '@/mixins/articles.js'
 import Article from "../components/Article.vue"
+import Search from "../components/Search.vue"
 
 export default {
   mixins: [ articles ],
   components: {
-      Article
+      Article,
+      Search
   },
 
   methods: {
@@ -95,6 +96,7 @@ ul {
     flex-wrap: wrap;
     background-color: #ffffff;
     padding-left: 0;
+    margin-bottom: 20px;
 }
 li {
     list-style: none;

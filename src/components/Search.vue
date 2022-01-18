@@ -1,0 +1,90 @@
+<template>
+    <form class="searchForm">
+        <input  v-model="inputedValue" type="search" class="text" placeholder="">
+        <button type="submit" value="検索"><img src="https://drive.google.com/uc?export=view&id=14qL6YD2g-JNNp6ClYdNpiVjZDAGp3eaL" alt=""></button>
+    </form>
+</template>
+
+<script>
+export default {
+    computed: {
+        inputedValue: {
+            get() {
+                return this.value;
+            },
+            set(newValue) {
+                this.$emit("input", newValue);
+            }
+        }
+    }
+}
+</script>
+
+<style lang="scss">
+$breakpoints: (
+  'sm': 'screen and (max-width: 480px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1020px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* 検索ボックスのスタイル */
+.searchForm {
+  height: 40px;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  
+  @include mq(md){
+    height: 40px;
+  }
+
+  & input[type="search"] {
+    height: 40px;
+    width: 92%;
+    padding: 0 16px;
+    border: none;
+    border-right: none;
+    font-size: 16px;
+    border-radius: 10px 0 0 10px;
+    &:focus {
+        outline: none;
+    }
+    
+    @include mq(md){
+      height: 40px;
+      border-right: 2px solid #000;
+      font-size: 1.8rem;
+    }
+  }
+  & button[type="submit"] {
+    border: none;
+    border-left: none;
+    padding: 0;
+    width: 8%;
+    height: 40px;
+    text-align: center;
+    border-radius: 0px 10px 10px 0;
+    background-color: #ffffff;
+    
+    @include mq(md){
+      height: 40px;
+    }
+
+    & img{
+      width: 22px;
+      
+      @include mq(md){
+        width: 20px;
+      }
+    }
+  }
+}
+</style>
