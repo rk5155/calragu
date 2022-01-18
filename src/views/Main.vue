@@ -1,7 +1,7 @@
 <template>
         <div>
             <Search v-model="keyword"></Search>
-            <nav>
+            <nav v-if="!keyword">
                 <ul>
                     <li v-for="nav in navList" :key="nav.id" @click="isSelect(nav.category)">{{ nav.category }}</li>
                 </ul>
