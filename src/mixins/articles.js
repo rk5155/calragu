@@ -3,6 +3,7 @@ export default {
         return {
             keyword: "",
             articles: [],
+            individualArticles: [],
             newArticle: [
                 { title: "【現代野球の評価】OPSの計算", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "スポーツ", url: "/ops" },
                 { title: "WHIPの計算", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "スポーツ", url: "/whip" },
@@ -61,6 +62,16 @@ export default {
                 return self.indexOf(x) === i;
             });
             return this.articles
+        },
+        searchBabseball: function() {
+            this.sports.forEach(el => {
+                this.pushIndividualArticles(el);
+            });
+            // 重複を削除
+            this.individualArticles = this.individualArticles.filter(function (x, i, self) {
+                return self.indexOf(x) === i;
+            });
+            return this.individualArticles
         }
     },
     methods: {
@@ -69,6 +80,13 @@ export default {
                 this.articles.push(el)
             } else if(!this.keyword) {
                 this.articles = [];
+            }
+        },
+        pushIndividualArticles: function(el) {
+            if (el.title.toLowerCase().includes(this.keyword.toLowerCase()) && this.keyword) {
+                this.individualArticles.push(el)
+            } else if(!this.keyword) {
+                this.individualArticles = [];
             }
         }
     },

@@ -7,8 +7,30 @@
 
         <p class="content__text">サルワカの「生活の知恵」カテゴリーでは、知っておくと役に立つ生活の知識や料理のコツ、レシピ、便利なサービスの活用方法などを分かりやすくまとめていきます。今後も少しずつ更新していきます。</p>
 
-        <div class="content-article">
+        <Search v-model="keyword"></Search>
+
+        <div class="content-article" v-if="searchBabseball.length == 0">
             <template v-for="el in sports">
+                <router-link v-if="el.subcategory == '野球'" :key="el.title" :to="el.url" >
+                    <article class="card">
+                        <div class="row g-0">
+                            <div :class="el.color">
+                                <img :src="el.img" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h2 class="card-title">{{ el.title }}</h2>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </router-link>
+            </template>
+        </div>
+
+        <div class="content-article" v-else-if="searchBabseball.length != 0">
+            <template v-for="el in searchBabseball">
                 <router-link v-if="el.subcategory == '野球'" :key="el.title" :to="el.url" >
                     <article class="card">
                         <div class="row g-0">
@@ -31,9 +53,13 @@
 
 <script>
 import articles from '@/mixins/articles.js'
+import Search from "../../components/Search.vue"
 
 export default {
     mixins: [ articles ],
+    components: {
+      Search
+  },
 }
 </script>
 
