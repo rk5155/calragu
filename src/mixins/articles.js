@@ -3,7 +3,6 @@ export default {
         return {
             keyword: "",
             articles: [],
-            individualArticles: [],
             newArticle: [
                 { title: "【現代野球の評価】OPSの計算", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "スポーツ", url: "/ops" },
                 { title: "WHIPの計算", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "スポーツ", url: "/whip" },
@@ -38,56 +37,56 @@ export default {
         }
     },
     computed: {
-        searchArticle: function() {            
+        searchArticle: function() {
+            let articles = [];
+
             this.sports.forEach(el => {
-                this.pushArticle(el);
+                this.pushArticle(el, articles);
             });
             this.health.forEach(el => {
-                this.pushArticle(el);
+                this.pushArticle(el, articles);
             });
             this.money.forEach(el => {
-                this.pushArticle(el);
+                this.pushArticle(el, articles);
             });
             this.arithmetic.forEach(el => {
-                this.pushArticle(el);
+                this.pushArticle(el, articles);
             });
             this.science.forEach(el => {
-                this.pushArticle(el);
+                this.pushArticle(el, articles);
             });
             this.date.forEach(el => {
-                this.pushArticle(el);
+                this.pushArticle(el, articles);
             });
-            // 重複を削除
-            this.articles = this.articles.filter(function (x, i, self) {
-                return self.indexOf(x) === i;
-            });
-            return this.articles
+            this.duplicateDelete(articles)
+
+            return articles
         },
         searchBabseball: function() {
+            let articles = [];
+            
             this.sports.forEach(el => {
-                this.pushIndividualArticles(el);
+                this.pushArticle(el, articles);
             });
-            // 重複を削除
-            this.individualArticles = this.individualArticles.filter(function (x, i, self) {
-                return self.indexOf(x) === i;
-            });
-            return this.individualArticles
+            this.duplicateDelete(articles)
+
+            return articles;
         }
     },
     methods: {
-        pushArticle: function(el) {
+        pushArticle: function(el, articles) {
             if (el.title.toLowerCase().includes(this.keyword.toLowerCase()) && this.keyword) {
-                this.articles.push(el)
+                articles.push(el)
             } else if(!this.keyword) {
-                this.articles = [];
+                articles = [];
             }
         },
-        pushIndividualArticles: function(el) {
-            if (el.title.toLowerCase().includes(this.keyword.toLowerCase()) && this.keyword) {
-                this.individualArticles.push(el)
-            } else if(!this.keyword) {
-                this.individualArticles = [];
-            }
+        duplicateDelete: function(articles) {
+            // 重複を削除
+            articles = articles.filter(function (x, i, self) {
+                return self.indexOf(x) === i;
+            });
+            return articles
         }
     },
 }
