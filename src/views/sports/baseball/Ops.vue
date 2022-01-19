@@ -1,6 +1,7 @@
 <template>
     <div class="calculation">
         <h1>{{ title }}</h1>
+        <img src="@/assets/images/sports/baseball/baseball_homerun_man.png" alt="">
         <p>【出塁率】＋【長打率】＝【ＯＰＳ】</p>
         <p>{{ desc }}</p>
 

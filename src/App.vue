@@ -75,9 +75,5 @@ main {
     .main-right {
         width: 26%;
     }
-    .calculation {
-      background-color: #ffffff;
-      padding: 40px;
-    }
 }
 </style>
