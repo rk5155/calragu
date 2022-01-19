@@ -58,6 +58,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/assets/scss/article.scss";
 
 main {
     background-color: $bodyColor;
