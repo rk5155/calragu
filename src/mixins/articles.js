@@ -4,10 +4,10 @@ export default {
             keyword: "",
             articles: [],
             newArticle: [
-                { title: "【現代野球の評価】OPSの計算", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "スポーツ", url: "/baseball/ops" },
-                { title: "【現代野球の投手評価】WHIPの計算", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "スポーツ", url: "/baseball/whip" },
-                { title: "【現代野球の評価】長打率の計算", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "スポーツ", url: "/baseball/slugging-percentage" },
-                { title: "【野球の評価】打率、出塁率の計算", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "スポーツ", url: "/baseball/base-percentage" },
+                { title: "【現代野球の評価】OPSの計算", category: "スポーツ", url: "/baseball/ops" },
+                { title: "【現代野球の投手評価】WHIPの計算", category: "スポーツ", url: "/baseball/whip" },
+                { title: "【現代野球の評価】長打率の計算", category: "スポーツ", url: "/baseball/slugging-percentage" },
+                { title: "【野球の評価】打率、出塁率の計算", category: "スポーツ", url: "/baseball/base-percentage" },
             ],
             sports: [
                 { title: "【現代野球の評価】OPSの計算", img: require('@/assets/images/sports/baseball/baseball_homerun_man.png'), category: "スポーツ", subcategory: "野球", url: "/baseball/ops", color: "img-background" },
