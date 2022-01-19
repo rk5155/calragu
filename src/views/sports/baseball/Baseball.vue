@@ -3,7 +3,7 @@
         <h1>野球の計算</h1>
         <p>〜現代野球の指標計算・指標まとめ</p>
 
-        <img src="@/assets/images/sports/baseball_homerun_man.png" alt="">
+        <img src="@/assets/images/sports/baseball/baseball_homerun_man.png" alt="">
 
         <p class="content__text">サルワカの「生活の知恵」カテゴリーでは、知っておくと役に立つ生活の知識や料理のコツ、レシピ、便利なサービスの活用方法などを分かりやすくまとめていきます。今後も少しずつ更新していきます。</p>
 
@@ -20,8 +20,8 @@
 
 <script>
 import articles from '@/mixins/articles.js'
-import Search from "../../components/Search.vue"
-import IndividualArticle from "../../components/IndividualArticle.vue"
+import Search from "../../../components/Search.vue"
+import IndividualArticle from "../../../components/IndividualArticle.vue"
 
 export default {
     mixins: [ articles ],

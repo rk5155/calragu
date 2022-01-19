@@ -1,8 +1,10 @@
 <template>
     <div class="calculation">
         <h1>{{ title }}</h1>
-        <p>【出塁率】＋【長打率】＝【ＯＰＳ】</p>
-        <p>現代野球でＯＰＳは得点相関と関係性が高く、ＯＰＳが高い打者は優秀だとされています。</p>
+        <p>打率 ＝ 安打数÷打数</p>
+        <p>打率とは、打席数から犠打、犠飛、四死球を除いた打数のうち、安打の割合を表します。</p>
+        <p>出塁率 =（安打数 + 四球数 + 死球数）÷（打数 + 四球数 + 死球数 + 犠飛数）</p>
+        <p>出塁率とは、打数、四球、死球、犠飛の合計数のうち、四球、死球、安打で出塁した割合を表します。犠飛のときは出塁ではないので出塁率は下がります。犠打も出塁ではないですが計算から除かれている為、出塁率は変わりません。また失策で出塁したときは、打数が1増えるだけなので出塁率は下がります。</p>
 
         <form>
             <Calculation v-for="list in formList" :key="list.label" :list="list" v-model.number="$data[list.data]"></Calculation>
@@ -16,15 +18,13 @@
                 <td v-if="result == 'ヒット数'">{{ hitNum }}</td>
                 <td v-else-if="result == '打率'">{{ average }}</td>
                 <td v-else-if="result == '出塁率'">{{ onBasePercentage }}</td>
-                <td v-else-if="result == '長打率'">{{ sluggingPercentage }}</td>
-                <td v-else-if="result == 'OPS'">{{ ops }}</td>
             </tr>
         </table>
     </div>
 </template>
 
 <script>
-import Calculation from "../components/Calculation.vue"
+import Calculation from "../../../components/Calculation.vue"
 import getTitle from '@/getTitle'
 
 export default {
@@ -50,13 +50,10 @@ export default {
             { label: "四死球数", data: 'fourDeadBalls' },
             { label: "犠飛数", data: 'sacrificeFly' },
         ],
-      resultList: ["ヒット数", "打率", "出塁率", "長打率", "OPS"]
+      resultList: ["ヒット数", "打率", "出塁率"]
     }
   },
   computed: {
-      hitNum: function() {
-          return this.hit1 + this.hit2 + this.hit3 + this.hit4;
-      },
       average: function() {
           let average = this.hitNum / this.bat;
 
@@ -66,6 +63,9 @@ export default {
               return average.toFixed(3);
           }
       },
+      hitNum: function() {
+          return this.hit1 + this.hit2 + this.hit3 + this.hit4;
+      },
       onBasePercentage: function() {
           let onBasePercentage = (this.hitNum + this.fourDeadBalls + this.sacrificeFly) / (this.bat + this.fourDeadBalls + this.sacrificeFly);
 
@@ -74,20 +74,6 @@ export default {
           } else {
               return onBasePercentage.toFixed(3);
           }
-      },
-      sluggingPercentage: function() {
-          let baseHit = this.hit1 + (this.hit2 * 2) + (this.hit3 * 3) + (this.hit4 * 4)
-          let sluggingPercentage = baseHit / this.bat;
-
-          if (isNaN(sluggingPercentage)) {
-            return 0
-          } else {
-            return sluggingPercentage.toFixed(3);
-          }
-      },
-      ops: function() {
-          let ops = Number(this.onBasePercentage) + Number(this.sluggingPercentage);
-          return ops.toFixed(3);
       }
   }
 }

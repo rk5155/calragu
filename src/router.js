@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Main from './views/Main.vue'
-import Ops from './views/Ops.vue'
-import Whip from './views/Whip.vue'
-import SluggingPercentage from './views/sports/SluggingPercentage.vue'
-import BasePercentage from './views/sports/BasePercentage.vue'
-import Baseball from './views/sports/Baseball.vue'
+import Ops from './views/sports/baseball/Ops.vue'
+import Whip from './views/sports/baseball/Whip.vue'
+import SluggingPercentage from './views/sports/baseball/SluggingPercentage.vue'
+import BasePercentage from './views/sports/baseball/BasePercentage.vue'
+import Baseball from './views/sports/baseball/Baseball.vue'
 import Points from './views/sports/soccer/Points.vue'
 
 
@@ -25,22 +25,22 @@ export default new Router({
       meta: { title: '野球の計算', desc: 'aaaaa' }
     },
     {
-        path: '/ops',
+        path: '/baseball/ops',
         component: Ops,
         meta: { title: '【現代野球の評価】OPSの計算', desc: 'ディスクリプションを記述' }
     },
     {
-      path: '/whip',
+      path: '/baseball//whip',
       component: Whip,
       meta: { title: '【現代野球の投手評価】WHIPの計算', desc: 'ディスクリプションを記述' }
     },
     {
-      path: '/slugging-percentage',
+      path: '/baseball//slugging-percentage',
       component: SluggingPercentage,
       meta: { title: '【現代野球の評価】長打率の計算', desc: 'ディスクリプションを記述' }
     },
     {
-      path: '/base-percentage',
+      path: '/baseball//base-percentage',
       component: BasePercentage,
       meta: { title: '【野球の評価】打率、出塁率の計算', desc: 'ディスクリプションを記述' }
     },

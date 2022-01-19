@@ -22,7 +22,7 @@
     </div>
 </template>
 <script>
-import Calculation from "../../components/Calculation.vue"
+import Calculation from "../../../components/Calculation.vue"
 import getTitle from '@/getTitle'
 
 export default {
