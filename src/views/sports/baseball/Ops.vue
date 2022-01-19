@@ -2,7 +2,7 @@
     <div class="calculation">
         <h1>{{ title }}</h1>
         <p>【出塁率】＋【長打率】＝【ＯＰＳ】</p>
-        <p>現代野球でＯＰＳは得点相関と関係性が高く、ＯＰＳが高い打者は優秀だとされています。</p>
+        <p>{{ desc }}</p>
 
         <form>
             <Calculation v-for="list in formList" :key="list.label" :list="list" v-model.number="$data[list.data]"></Calculation>

@@ -2,13 +2,15 @@ export default {
     data () {
         return {
             title: '',
-            path: ''
+            path: '',
+            desc: ''
         }
     },
     methods: {
         getMeta(route){
             this.title = route.meta.title
             this.path = route.path
+            this.desc = route.meta.desc
         }
     },
     mounted() {

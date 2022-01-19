@@ -2,7 +2,7 @@
     <div class="calculation">
         <h1>{{ title }}</h1>
         <p>WHIP = 与四球数 + 被安打数 ÷ 投球回数</p>
-        <p>1イニングあたりに何人の走者を出しているかを算出しています。</p>
+        <p>{{ desc }}</p>
 
         <form>
             <Calculation v-for="list in formList" :key="list.label" :list="list" v-model.number="$data[list.data]"></Calculation>

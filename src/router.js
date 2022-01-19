@@ -22,32 +22,32 @@ export default new Router({
     {
       path: '/baseball',
       component: Baseball,
-      meta: { title: '野球の計算', desc: 'aaaaa' }
+      meta: { title: '現代野球における指標の計算', desc: '現代野球において、選手を評価する指標があります。野球におけるいろいろな指標の計算方法をまとめました。' }
     },
     {
         path: '/baseball/ops',
         component: Ops,
-        meta: { title: '【現代野球の評価】OPSの計算', desc: 'ディスクリプションを記述' }
+        meta: { title: '【現代野球の評価】OPSの計算', desc: '現代野球でＯＰＳは得点相関と関係性が高く、ＯＰＳが高い打者は優秀だとされています。' }
     },
     {
-      path: '/baseball//whip',
+      path: '/baseball/whip',
       component: Whip,
-      meta: { title: '【現代野球の投手評価】WHIPの計算', desc: 'ディスクリプションを記述' }
+      meta: { title: '【現代野球の投手評価】WHIPの計算', desc: '1イニングあたりに何人の走者を出しているかを算出しています。' }
     },
     {
-      path: '/baseball//slugging-percentage',
+      path: '/baseball/slugging-percentage',
       component: SluggingPercentage,
-      meta: { title: '【現代野球の評価】長打率の計算', desc: 'ディスクリプションを記述' }
+      meta: { title: '【現代野球の評価】長打率の計算', desc: '長打率とは、1打数あたりの塁打数の平均値を表します。塁打とは、「単打＝1、二塁打＝2、三塁打＝3、本塁打＝4」として計算します。1打数1安打1本塁打の選手は、塁打数の4を打数の1で割るので、長打率4.000となるわけです。' }
     },
     {
-      path: '/baseball//base-percentage',
+      path: '/baseball/base-percentage',
       component: BasePercentage,
-      meta: { title: '【野球の評価】打率、出塁率の計算', desc: 'ディスクリプションを記述' }
+      meta: { title: '【野球の評価】打率、出塁率の計算', desc: '出塁率とは、打数、四球、死球、犠飛の合計数のうち、四球、死球、安打で出塁した割合を表します。犠飛のときは出塁ではないので出塁率は下がります。犠打も出塁ではないですが計算から除かれている為、出塁率は変わりません。また失策で出塁したときは、打数が1増えるだけなので出塁率は下がります。' }
     },
     {
         path: '/soccer/points',
         component: Points,
-        meta: { title: '【サッカー】勝ち点の計算', desc: 'ディスクリプションを記述' }
+        meta: { title: '【サッカー】勝ち点の計算', desc: 'リーグ戦では、勝ち、負けの他に、引き分けがあります。(決勝トーナメントでは、PK戦で決着を付けます。)順位は勝ち点で決まります。' }
     }
   ],
   //ページ遷移したときトップに移動かつ、ブラウザの戻るボタンを押したとき、もとの位置に戻る
