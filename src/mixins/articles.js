@@ -14,6 +14,7 @@ export default {
                 { title: "WHIPの計算", img: require('@/assets/images/sports/baseball_pitcher_overthrow.png'), category: "スポーツ", subcategory: "野球", url: "/whip", color: "img-background--blue" },
                 { title: "【現代野球の評価】長打率の計算", img: require('@/assets/images/sports/baseball_hit_woman.png'), category: "スポーツ", subcategory: "野球", url: "/slugging-percentage", color: "img-background--beige" },
                 { title: "【野球の評価】打率、出塁率の計算", img: require('@/assets/images/sports/baseball_batter_man.png'), category: "スポーツ", subcategory: "野球", url: "/base-percentage", color: "img-background--red" },
+                { title: "【サッカー】勝ち点の計算", img: require('@/assets/images/sports/soccer/soccer_dribble2.png'), category: "スポーツ", subcategory: "サッカー", url: "/soccer/points", color: "img-background" },
             ],
             health: [
                 { title: "タイトルタイトル5", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "健康", url: "" },

@@ -6,7 +6,7 @@ import Whip from './views/Whip.vue'
 import SluggingPercentage from './views/sports/SluggingPercentage.vue'
 import BasePercentage from './views/sports/BasePercentage.vue'
 import Baseball from './views/sports/Baseball.vue'
-import Page1 from './views/Page1.vue'
+import Points from './views/sports/soccer/Points.vue'
 
 
 Vue.use(Router)
@@ -45,9 +45,9 @@ export default new Router({
       meta: { title: '【野球の評価】打率、出塁率の計算', desc: 'ディスクリプションを記述' }
     },
     {
-        path: '/page1',
-        component: Page1,
-        meta: { title: 'page1', desc: 'ディスクリプションを記述' }
+        path: '/soccer/points',
+        component: Points,
+        meta: { title: '【サッカー】勝ち点の計算', desc: 'ディスクリプションを記述' }
     }
   ],
   //ページ遷移したときトップに移動かつ、ブラウザの戻るボタンを押したとき、もとの位置に戻る
