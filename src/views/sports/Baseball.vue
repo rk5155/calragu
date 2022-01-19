@@ -9,44 +9,11 @@
 
         <Search v-model="keyword"></Search>
 
-        <div class="content-article" v-if="searchBabseball.length == 0">
-            <template v-for="el in sports">
-                <router-link v-if="el.subcategory == '野球'" :key="el.title" :to="el.url" >
-                    <article class="card">
-                        <div class="row g-0">
-                            <div :class="el.color">
-                                <img :src="el.img" alt="">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h2 class="card-title">{{ el.title }}</h2>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </router-link>
-            </template>
+        <div v-if="searchBabseball.length == 0">
+            <IndividualArticle :article="sports"></IndividualArticle>
         </div>
-
-        <div class="content-article" v-else-if="searchBabseball.length != 0">
-            <template v-for="el in searchBabseball">
-                <router-link v-if="el.subcategory == '野球'" :key="el.title" :to="el.url" >
-                    <article class="card">
-                        <div class="row g-0">
-                            <div :class="el.color">
-                                <img :src="el.img" alt="">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h2 class="card-title">{{ el.title }}</h2>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </router-link>
-            </template>
+        <div v-else-if="searchBabseball.length != 0">
+            <IndividualArticle :article="searchBabseball"></IndividualArticle>
         </div>
     </div>
 </template>
@@ -54,11 +21,13 @@
 <script>
 import articles from '@/mixins/articles.js'
 import Search from "../../components/Search.vue"
+import IndividualArticle from "../../components/IndividualArticle.vue"
 
 export default {
     mixins: [ articles ],
     components: {
-      Search
+      Search,
+      IndividualArticle
   },
 }
 </script>
