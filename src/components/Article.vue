@@ -34,6 +34,8 @@ export default {
         &:hover {
             box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
             transform: translateY(-4px);
+            text-decoration: none;
+            color: $mainColor;
         }
         &:nth-child(odd) {
             margin-right: 12px;

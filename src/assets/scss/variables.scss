@@ -14,3 +14,10 @@ $textColor2: #8a8a8a;
     width: 120px;
     height: 120px;
 }
+@mixin linkColor() {
+    color: #333;
+    &:hover {
+        text-decoration: none;
+        color: $mainColor;
+    }
+}

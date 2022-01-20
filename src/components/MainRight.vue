@@ -1,7 +1,7 @@
 <template>
     <div class="main-right">
         <div class="main-right-block">
-            <h3 class="main-right-block__title">新着記事</h3>
+            <h3 class="main-right-block__title"><i class="far fa-newspaper"></i>新着記事</h3>
 
             <div class="main-right-articles" v-for="article in newArticle.slice(-6)" :key="article.title">
                 <router-link :to="article.url">
@@ -11,16 +11,15 @@
             </div>
         </div>
         <div class="main-right-block--white">
-            <h3 class="main-right-block__title">カテゴリー</h3>
-            <Category></Category>
+            <h3 class="main-right-block__title"><i class="fas fa-book-open"></i>カテゴリー</h3>
 
             <div class="main-right-block-wrapper">
-                <Category :categorys="sports" title="スポーツ"></Category>
-                <Category :categorys="health" title="健康"></Category>
-                <Category :categorys="money" title="お金"></Category>
-                <Category :categorys="arithmetic" title="数学・算数"></Category>
-                <Category :categorys="science" title="科学"></Category>
-                <Category :categorys="date" title="日付"></Category>
+                <Category :categorys="sports" title="スポーツ" icon="fas fa-running"></Category>
+                <Category :categorys="health" title="健康" icon="far fa-heart"></Category>
+                <Category :categorys="money" title="お金" icon="fas fa-yen-sign"></Category>
+                <Category :categorys="arithmetic" title="数学・算数" icon="fas fa-divide"></Category>
+                <Category :categorys="science" title="科学" icon="fas fa-vial"></Category>
+                <Category :categorys="date" title="日付" icon="far fa-calendar-alt"></Category>
             </div>
         </div>
     </div>
@@ -92,7 +91,11 @@ export default {
         }
     }
     a {
-        color: #8a8a8a;
+        @include linkColor
+    }
+    i {
+        margin-right: 6px;
+        color: $mainColor;
     }
 }
 .main-right-block__h4 {
@@ -105,13 +108,16 @@ export default {
 .main-right-block__title {
     background-color: $mainColor;
     color: #ffffff;
-    text-align: center;
+    text-align: left;
     font-size: 18px;
-    padding: 4px 0;
+    padding: 8px 14px;
     font-weight: bold;
+    i {
+        margin-right: 10px;
+    }
 }
 .main-right-articles {
-    padding: 10px;
+    padding: 10px 14px;
     background-color: #ffffff;
     margin-bottom: 10px;
     border-radius: 3px;
@@ -123,6 +129,10 @@ export default {
     }
     a {
         color: #333;
+        &:hover {
+            text-decoration: none;
+            color: #333;
+        }
     }
     h4 {
         font-size: 16px;
