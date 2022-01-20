@@ -16,6 +16,8 @@
       </div>
 
     </main>
+
+    <Footer></Footer>
   </div>
 </template>
 
@@ -23,12 +25,14 @@
 import Header from './components/Header.vue'
 import MainRight from './components/MainRight.vue'
 import getTitle from '@/getTitle'
+import Footer from './components/Footer.vue'
 import 'normalize.css'
 
 export default {
   components: {
     Header,
-    MainRight
+    MainRight,
+    Footer
   },
   mixins: [ getTitle ],
   methods : {
