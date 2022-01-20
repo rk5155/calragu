@@ -5,7 +5,7 @@
             <ul>
                 <template v-for="nav in navList">
                     <li v-if="nav.category == 'スポーツ'" class="is-select" :key="nav.id" @click="noSelect(), isSelect(nav.category, $event)">{{ nav.category }}</li>
-                    <li v-else :key="nav.id" @click="noSelect(), isSelect(nav.category, $event)">{{ nav.category }}</li>
+                    <li v-else :key="nav.category" @click="noSelect(), isSelect(nav.category, $event)">{{ nav.category }}</li>
                 </template>
             </ul>
         </nav>
@@ -115,6 +115,6 @@ li {
     padding: 4px 0;
     border: 1px solid $bodyColor;
     font-weight: bold;
-    color: $textColor2;
+    @include linkColor
 }
 </style>

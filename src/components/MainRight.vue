@@ -77,6 +77,7 @@ export default {
         color: #333;
         text-decoration: none;
         list-style: none;
+        margin-bottom: 4px;
         &::before {
             content: '';
             width: 0;
@@ -137,6 +138,7 @@ export default {
     h4 {
         font-size: 16px;
         font-weight: bold;
+        line-height: 1.4;
     }
     .main-right-articles__category {
         display: inline-block;
