@@ -1,11 +1,6 @@
 <template>
     <div class="calculation">
-        
-        <template v-for="el in sports">
-            <template v-if="el.title == title">
-                <ArticleText :key="el.title" :title="el.title" :img='el.img' :p="el.text" :desc="desc"></ArticleText>
-            </template>
-        </template>
+        <ArticleText :title="title" :desc="desc" :article="sports"></ArticleText>
 
         <form>
             <Calculation v-for="list in formList" :key="list.label" :list="list" v-model.number="$data[list.data]"></Calculation>

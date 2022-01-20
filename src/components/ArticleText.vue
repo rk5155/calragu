@@ -1,14 +1,18 @@
 <template>
     <div>
-        <h1>{{ title }}</h1>
-        <img :src="img" alt="">
-        <p v-html="p"></p>
-        <p>{{ desc }}</p>
+        <template v-for="el in article">
+            <div v-if="el.title == title" :key="el.title">
+                <h1>{{ title }}</h1>
+                <img :src="el.img" alt="">
+                <p v-html="el.text"></p>
+                <p>{{ desc }}</p>
+            </div>
+        </template>
     </div>
 </template>
 
 <script>
 export default {
-    props: ["title", "img", "p", "desc"],
+    props: ["title", "desc", "article"],
 }
 </script>
