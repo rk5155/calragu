@@ -2,7 +2,7 @@
     <div>
         <h1>{{ title }}</h1>
         <img :src="img" alt="">
-        <p>{{ p }}</p>
+        <p v-html="p"></p>
         <p>{{ desc }}</p>
     </div>
 </template>

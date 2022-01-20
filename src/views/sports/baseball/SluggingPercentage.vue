@@ -1,8 +1,10 @@
 <template>
     <div class="calculation">
-        <h1>{{ title }}</h1>
-        <p>長打率 = 塁打数 ÷ 打数</p>
-        <p>{{ desc }}</p>
+        <template v-for="el in sports">
+            <template v-if="el.title == title">
+                <ArticleText :key="el.title" :title="el.title" :img='el.img' :p="el.text" :desc="desc"></ArticleText>
+            </template>
+        </template>
 
         <form>
             <Calculation v-for="list in formList" :key="list.label" :list="list" v-model.number="$data[list.data]"></Calculation>
@@ -24,12 +26,15 @@
 <script>
 import Calculation from "../../../components/Calculation.vue"
 import getTitle from '@/getTitle'
+import ArticleText from "../../../components/ArticleText.vue"
+import articles from '@/mixins/articles.js'
 
 export default {
   components: {
     Calculation,
+    ArticleText
   },
-  mixins: [ getTitle ],
+  mixins: [ getTitle, articles ],
   data () {
     return {
       bat: 0,

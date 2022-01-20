@@ -1,6 +1,11 @@
 <template>
     <div class="calculation">
-        <ArticleText :title="title" :img='img' :p="p" :desc="desc"></ArticleText>
+        
+        <template v-for="el in sports">
+            <template v-if="el.title == title">
+                <ArticleText :key="el.title" :title="el.title" :img='el.img' :p="el.text" :desc="desc"></ArticleText>
+            </template>
+        </template>
 
         <form>
             <Calculation v-for="list in formList" :key="list.label" :list="list" v-model.number="$data[list.data]"></Calculation>
@@ -25,13 +30,14 @@
 import Calculation from "../../../components/Calculation.vue"
 import getTitle from '@/getTitle'
 import ArticleText from "../../../components/ArticleText.vue"
+import articles from '@/mixins/articles.js'
 
 export default {
   components: {
     Calculation,
     ArticleText
   },
-  mixins: [ getTitle ],
+  mixins: [ getTitle, articles ],
   data () {
     return {
       bat: 0,
@@ -41,8 +47,6 @@ export default {
       hit4: 0,
       fourDeadBalls: 0,
       sacrificeFly: 0,
-      img: require('../../../assets/images/sports/baseball/baseball_homerun_man.png'),
-      p: "【出塁率】＋【長打率】＝【ＯＰＳ】",
       formList: [
             { label: "打数", data: 'bat' },
             { label: "単打数", data: 'hit1' },

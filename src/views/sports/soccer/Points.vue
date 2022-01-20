@@ -1,13 +1,10 @@
 <template>
     <div class="calculation">
-        <h1>{{ title }}</h1>
-        <p>サッカーワールドカップでは、予選はリーグ戦(総当り)で、予選上位による決勝トーナメントが行われます。</p>
-        <p>リーグ戦では、勝ち、負けの他に、引き分けがあります。(決勝トーナメントでは、PK戦で決着を付けます。)順位は勝ち点で決まります。</p>
-        <ul>
-            <li>勝ち :  3 点</li>
-            <li>引き分け : 1 点</li>
-            <li>負け : 0 点</li>
-        </ul>
+        <template v-for="el in sports">
+            <template v-if="el.title == title">
+                <ArticleText :key="el.title" :title="el.title" :img='el.img' :p="el.text" :desc="desc"></ArticleText>
+            </template>
+        </template>
 
         <form>
             <Calculation v-for="list in formList" :key="list.label" :list="list" v-model.number="$data[list.data]"></Calculation>
@@ -21,12 +18,15 @@
 <script>
 import Calculation from "../../../components/Calculation.vue"
 import getTitle from '@/getTitle'
+import ArticleText from "../../../components/ArticleText.vue"
+import articles from '@/mixins/articles.js'
 
 export default {
   components: {
     Calculation,
+    ArticleText
   },
-  mixins: [ getTitle ],
+  mixins: [ getTitle, articles ],
   data () {
     return {
       num1: 0,

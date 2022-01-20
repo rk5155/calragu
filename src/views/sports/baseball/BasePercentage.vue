@@ -1,10 +1,10 @@
 <template>
     <div class="calculation">
-        <h1>{{ title }}</h1>
-        <p>打率 ＝ 安打数÷打数</p>
-        <p>打率とは、打席数から犠打、犠飛、四死球を除いた打数のうち、安打の割合を表します。</p>
-        <p>出塁率 =（安打数 + 四球数 + 死球数）÷（打数 + 四球数 + 死球数 + 犠飛数）</p>
-        <p>{{ desc }}</p>
+        <template v-for="el in sports">
+            <template v-if="el.title == title">
+                <ArticleText :key="el.title" :title="el.title" :img='el.img' :p="el.text" :desc="desc"></ArticleText>
+            </template>
+        </template>
 
         <form>
             <Calculation v-for="list in formList" :key="list.label" :list="list" v-model.number="$data[list.data]"></Calculation>
@@ -26,12 +26,15 @@
 <script>
 import Calculation from "../../../components/Calculation.vue"
 import getTitle from '@/getTitle'
+import ArticleText from "../../../components/ArticleText.vue"
+import articles from '@/mixins/articles.js'
 
 export default {
   components: {
     Calculation,
+    ArticleText
   },
-  mixins: [ getTitle ],
+  mixins: [ getTitle, articles ],
   data () {
     return {
       bat: 0,
