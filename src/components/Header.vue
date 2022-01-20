@@ -1,8 +1,8 @@
 <template>
     <header id="header">
       <div class="header-wrapper">
-        <router-link  v-if="path == '/'" to="/"><h1 class="navbar-brand u-font__bold" to="/" exact>【自動でいろいろ計算できるサイト】天才マンボウ</h1></router-link>
-        <router-link v-else to="/"><p class="navbar-brand u-font__bold" to="/" exact>【自動でいろいろ計算できるサイト】天才マンボウ</p></router-link>
+        <router-link  v-if="path == '/'" to="/"><h1 class="navbar-brand u-font__bold" to="/" exact><i class="fas fa-dog"></i>【自動でいろいろ計算できる】カルラグ</h1></router-link>
+        <router-link v-else to="/"><p class="navbar-brand u-font__bold" to="/" exact>【自動でいろいろ計算できる】カルラグ</p></router-link>
       </div>
     </header>
 </template>
