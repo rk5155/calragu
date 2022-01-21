@@ -52,6 +52,9 @@ export default {
     .img-background {
         @include imgBackground(#C8E6FF); 
     }
+    .img-background--white {
+        @include imgBackground(#ffffff); 
+    }
     .img-background--blue {
         @include imgBackground(#8DD7F7); 
     }

@@ -7,6 +7,7 @@ import SluggingPercentage from './views/sports/baseball/SluggingPercentage.vue'
 import BasePercentage from './views/sports/baseball/BasePercentage.vue'
 import Baseball from './views/sports/baseball/Baseball.vue'
 import Defense from './views/sports/baseball/Defense.vue'
+import Winbase from './views/sports/baseball/Winbase.vue'
 import Points from './views/sports/soccer/Points.vue'
 
 
@@ -49,6 +50,11 @@ export default new Router({
       path: '/baseball/defense',
       component: Defense,
       meta: { title: '【野球の評価】防御率の計算', desc: '防御率とは、その投手が9イニング（1試合）を投げたとしたら何点に抑えられるかを示す指標です。基準となるのが自責点で、自責点とは失策や捕逸などが絡まない、投手が責任を負わなければならない失点のことです。' }
+    },
+    {
+      path: '/baseball/win',
+      component: Winbase,
+      meta: { title: '【野球】勝率の計算', desc: '勝率とは、引分試合を除いた試合数のうち、勝った割合を表します。' }
     },
     {
         path: '/soccer/points',
