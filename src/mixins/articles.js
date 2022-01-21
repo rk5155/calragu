@@ -75,6 +75,16 @@ export default {
                     source: "https://npb.jp/scoring/calculation.html"
                 },
                 {
+                    title: "【現代野球の投手評価、指標】QS率の計算",
+                    text: "QS率 = QS数 ÷ 先発登板数<br><br>QS = 先発投手が６イニング以上を投げ、かつ自責点を３失点以内に抑える。",
+                    img: require('@/assets/images/sports/baseball/baseball_03.png'),
+                    category: "スポーツ", 
+                    subcategory: "野球", 
+                    url: "/baseball/qs", 
+                    color: "img-background--blue",
+                    source: "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%82%AA%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BB%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88"
+                },
+                {
                     title: "【サッカー】勝ち点の計算",
                     text: "勝ち :  3 点<br>引き分け : 1 点<br>負け : 0 点",
                     img: require('@/assets/images/sports/soccer/soccer_dribble2.png'),

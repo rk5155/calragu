@@ -9,6 +9,7 @@ import Baseball from './views/sports/baseball/Baseball.vue'
 import Defense from './views/sports/baseball/Defense.vue'
 import Winbase from './views/sports/baseball/Winbase.vue'
 import Defensive from './views/sports/baseball/Defensive.vue'
+import Qs from './views/sports/baseball/Qs.vue'
 import Points from './views/sports/soccer/Points.vue'
 
 
@@ -61,6 +62,11 @@ export default new Router({
       path: '/baseball/defensive',
       component: Defensive,
       meta: { title: '【現代野球の守備評価】守備率の計算', desc: '守備率とは、守備機会（アウトに関与した機会）、すなわち刺殺、補殺、失策の合計のうち、失策をしなかった割合を表します。例えばサードゴロで三塁手から一塁手に送球しアウトにした場合、送球した三塁手に補殺が、送球を受けた一塁手に刺殺がそれぞれ与えられます。フライを捕ってアウトにした場合は捕球した野手に刺殺が与えられます。' }
+    },
+    {
+      path: '/baseball/qs',
+      component: Qs,
+      meta: { title: '【現代野球の投手評価、指標】QS率の計算', desc: 'QS（クオリティ・スタート）とは、先発投手を評価する指標として使用されます。' }
     },
     {
         path: '/soccer/points',
