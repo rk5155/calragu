@@ -18,7 +18,7 @@ export default new Router({
     {
         path: '/',
         component: Main,
-        meta: { title: '【無料自動計算サイト】カルラグ', desc: '自動計算ならカルラグ！いろいろジャンルを自動計算できる便利なサイトです。' }
+        meta: { title: '【無料自動計算サイト】カルラグ', desc: '自動計算ならカルラグ！いろいろなジャンルを無料で自動計算できる便利なサイトです。' }
     },
     {
       path: '/baseball',
