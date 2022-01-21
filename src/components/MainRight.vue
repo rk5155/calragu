@@ -3,12 +3,12 @@
         <div class="main-right-block">
             <h3 class="main-right-block__title"><i class="far fa-newspaper"></i>新着記事</h3>
 
-            <div class="main-right-articles" v-for="article in newArticle.slice(-6)" :key="article.title">
-                <router-link :to="article.url">
+            <template  v-for="article in newArticle.slice(-6)">
+                <router-link class="main-right-articles" :to="article.url" :key="article.title">
                     <span class="main-right-articles__category">{{ article.category }}</span>
                     <h4>{{ article.title }}</h4>
                 </router-link>
-            </div>
+            </template>
         </div>
         <div class="main-right-block--white">
             <h3 class="main-right-block__title"><i class="fas fa-book-open"></i>カテゴリー</h3>
@@ -118,22 +118,21 @@ export default {
     }
 }
 .main-right-articles {
+    display: block;
     padding: 10px 14px;
     background-color: #ffffff;
     margin-bottom: 10px;
     border-radius: 3px;
     box-shadow: 0 0 3px 0 rgba(0,0,0,.12), 0 2px 3px 0 rgba(0,0,0,.22);
     transition: .3s;
-    &:hover {
-            box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
-            transform: translateY(-4px);
-    }
-    a {
-        color: #333;
+    color: #333;
         &:hover {
             text-decoration: none;
             color: #333;
         }
+    &:hover {
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+            transform: translateY(-4px);
     }
     h4 {
         font-size: 16px;

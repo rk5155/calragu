@@ -2,7 +2,7 @@
     <header id="header">
       <div class="header-wrapper">
         <router-link  v-if="path == '/'" to="/"><h1 class="navbar-brand u-font__bold" to="/" exact><i class="fas fa-paw"></i>カルラグ<span>自動でいろいろ計算</span></h1></router-link>
-        <router-link v-else to="/"><p class="navbar-brand u-font__bold" to="/" exact><i class="fas fa-paw"></i>カルラグ<span>自動でいろいろ計算できる</span></p></router-link>
+        <router-link v-else to="/"><p class="navbar-brand u-font__bold" to="/" exact><i class="fas fa-paw"></i>カルラグ<span>自動でいろいろ計算</span></p></router-link>
       </div>
     </header>
 </template>
