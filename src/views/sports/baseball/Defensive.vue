@@ -10,16 +10,16 @@
         <table class="table table-striped">
             <tr>
                 <td>守備率</td>
-                <td>{{ win }}</td>
+                <td>{{ defensive }}</td>
             </tr>
         </table>
     </div>
 </template>
 
 <script>
-import Calculation from "../../../components/Calculation.vue"
+import Calculation from "@/components/Calculation.vue"
 import getTitle from '@/getTitle'
-import ArticleText from "../../../components/ArticleText.vue"
+import ArticleText from "@/components/ArticleText.vue"
 import articles from '@/mixins/articles.js'
 
 export default {
