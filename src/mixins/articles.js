@@ -14,7 +14,7 @@ export default {
                 { title: "【現代野球の投手評価】WHIPの計算", text: "WHIP = 与四球数 + 被安打数 ÷ 投球回数", img: require('@/assets/images/sports/baseball/baseball_pitcher_overthrow.png'), category: "スポーツ", subcategory: "野球", url: "/baseball/whip", color: "img-background--blue" },
                 { title: "【現代野球の評価】長打率の計算", text: "長打率 = 塁打数 ÷ 打数", img: require('@/assets/images/sports/baseball/baseball_hit_woman.png'), category: "スポーツ", subcategory: "野球", url: "/baseball/slugging-percentage", color: "img-background--beige" },
                 { title: "【野球の評価】打率、出塁率の計算",text: `打率 ＝ 安打数÷打数<br><br>打率とは、打席数から犠打、犠飛、四死球を除いた打数のうち、安打の割合を表します。<br><br>出塁率 =（安打数 + 四球数 + 死球数）÷（打数 + 四球数 + 死球数 + 犠飛数）`, img: require('@/assets/images/sports/baseball/baseball_batter_man.png'), category: "スポーツ", subcategory: "野球", url: "/baseball/base-percentage", color: "img-background--red" },
-                { title: "【野球の評価】防御率の計算",text: `防御率 ＝ 自責点×9÷投球回数`, img: require('@/assets/images/sports/baseball/baseball_batter_man.png'), category: "スポーツ", subcategory: "野球", url: "/baseball/defense", color: "img-background--blue",  source: "https://npb.jp/scoring/calculation.html" },
+                { title: "【野球の評価】防御率の計算",text: `防御率 ＝ 自責点×9÷投球回数`, img: require('@/assets/images/sports/baseball/baseball_pitcher_overthrow.png'), category: "スポーツ", subcategory: "野球", url: "/baseball/defense", color: "img-background--blue",  source: "https://npb.jp/scoring/calculation.html" },
                 { title: "【サッカー】勝ち点の計算", text: "勝ち :  3 点<br>引き分け : 1 点<br>負け : 0 点", img: require('@/assets/images/sports/soccer/soccer_dribble2.png'), category: "スポーツ", subcategory: "サッカー", url: "/soccer/points", color: "img-background" },
             ],
             health: [
