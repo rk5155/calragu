@@ -6,6 +6,7 @@ import Whip from './views/sports/baseball/Whip.vue'
 import SluggingPercentage from './views/sports/baseball/SluggingPercentage.vue'
 import BasePercentage from './views/sports/baseball/BasePercentage.vue'
 import Baseball from './views/sports/baseball/Baseball.vue'
+import Defense from './views/sports/baseball/Defense.vue'
 import Points from './views/sports/soccer/Points.vue'
 
 
@@ -43,6 +44,11 @@ export default new Router({
       path: '/baseball/base-percentage',
       component: BasePercentage,
       meta: { title: '【野球の評価】打率、出塁率の計算', desc: '出塁率とは、打数、四球、死球、犠飛の合計数のうち、四球、死球、安打で出塁した割合を表します。犠飛のときは出塁ではないので出塁率は下がります。犠打も出塁ではないですが計算から除かれている為、出塁率は変わりません。また失策で出塁したときは、打数が1増えるだけなので出塁率は下がります。' }
+    },
+    {
+      path: '/baseball/defense',
+      component: Defense,
+      meta: { title: '【野球の評価】防御率の計算', desc: '防御率とは、その投手が9イニング（1試合）を投げたとしたら何点に抑えられるかを示す指標です。基準となるのが自責点で、自責点とは失策や捕逸などが絡まない、投手が責任を負わなければならない失点のことです。' }
     },
     {
         path: '/soccer/points',
