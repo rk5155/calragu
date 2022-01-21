@@ -66,6 +66,15 @@ export default {
                     source: "https://npb.jp/scoring/calculation.html"
                 },
                 {
+                    title: "【現代野球の守備評価】守備率の計算",
+                    text: "守備率 ＝ （刺殺＋補殺）÷（刺殺＋補殺＋失策）",
+                    img: require('@/assets/images/sports/baseball/baseball_02.png'),
+                    category: "スポーツ", 
+                    subcategory: "野球", url: "/baseball/defensive", 
+                    color: "img-background--red",
+                    source: "https://npb.jp/scoring/calculation.html"
+                },
+                {
                     title: "【サッカー】勝ち点の計算",
                     text: "勝ち :  3 点<br>引き分け : 1 点<br>負け : 0 点",
                     img: require('@/assets/images/sports/soccer/soccer_dribble2.png'),
