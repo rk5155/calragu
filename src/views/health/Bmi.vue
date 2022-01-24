@@ -1,6 +1,6 @@
 <template>
     <div class="calculation">
-        <ArticleText :title="title" :desc="desc" :article="sports"></ArticleText>
+        <ArticleText :title="title" :desc="desc" :article="health"></ArticleText>
 
         <form>
             <Calculation v-for="list in formList" :key="list.label" :list="list" :step="list.step" :initialValue="list.value" v-model.number="$data[list.data]"></Calculation>

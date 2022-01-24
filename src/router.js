@@ -77,7 +77,7 @@ export default new Router({
     {
       path: '/health/bmi',
       component: Bmi,
-      meta: { title: '【肥満度診断】BMI指数の計算', desc: 'BMIとは、体重と身長の関係から算出される、ヒトの肥満度を表す体格指数である。' }
+      meta: { title: '【肥満度診断】BMI指数の自動計算', desc: 'BMIとは、体重と身長の関係から算出される、ヒトの肥満度を表す体格指数である。' }
     },
   ],
   //ページ遷移したときトップに移動かつ、ブラウザの戻るボタンを押したとき、もとの位置に戻る
