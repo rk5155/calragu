@@ -11,6 +11,7 @@ import Winbase from './views/sports/baseball/Winbase.vue'
 import Defensive from './views/sports/baseball/Defensive.vue'
 import Qs from './views/sports/baseball/Qs.vue'
 import Points from './views/sports/soccer/Points.vue'
+import Bmi from './views/health/Bmi.vue'
 
 
 Vue.use(Router)
@@ -72,7 +73,12 @@ export default new Router({
         path: '/soccer/points',
         component: Points,
         meta: { title: '【サッカー】勝ち点の計算', desc: 'サッカーの勝利3点、引分1点、敗北0点という方式である。' }
-    }
+    },
+    {
+      path: '/health/bmi',
+      component: Bmi,
+      meta: { title: '【肥満度診断】BMI指数の計算', desc: 'BMIとは、体重と身長の関係から算出される、ヒトの肥満度を表す体格指数である。' }
+    },
   ],
   //ページ遷移したときトップに移動かつ、ブラウザの戻るボタンを押したとき、もとの位置に戻る
   scrollBehavior (to, from, savedPosition) {

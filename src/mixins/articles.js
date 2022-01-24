@@ -93,6 +93,15 @@ export default {
                     color: "img-background",
                     source: "https://ja.wikipedia.org/wiki/%E5%8B%9D%E3%81%A1%E7%82%B9"
                 },
+                {
+                    title: "【肥満度診断】BMI指数の計算",
+                    text: "BMI = 体重kg ÷ (身長m)<sup>2</sup>",
+                    img: require('@/assets/images/health/health_01.png'),
+                    category: "健康", 
+                    url: "/health/bmi", 
+                    color: "img-background--beige",
+                    source: "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%87%E3%82%A3%E3%83%9E%E3%82%B9%E6%8C%87%E6%95%B0"
+                },
             ],
             health: [
                 { title: "タイトルタイトル5", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "健康", url: "" },
