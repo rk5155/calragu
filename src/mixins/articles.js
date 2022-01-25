@@ -4,14 +4,14 @@ export default {
             keyword: "",
             articles: [],
             newArticle: [
-                { title: "【現代野球の評価】OPSの計算", category: "スポーツ", url: "/baseball/ops" },
-                { title: "【現代野球の投手評価】WHIPの計算", category: "スポーツ", url: "/baseball/whip" },
-                { title: "【現代野球の評価】長打率の計算", category: "スポーツ", url: "/baseball/slugging-percentage" },
-                { title: "【野球の評価】打率、出塁率の計算", category: "スポーツ", url: "/baseball/base-percentage" },
+                { title: "【現代野球の評価】OPSの自動計算", category: "スポーツ", url: "/baseball/ops" },
+                { title: "【現代野球の投手評価】WHIPの自動計算", category: "スポーツ", url: "/baseball/whip" },
+                { title: "【現代野球の評価】長打率の自動計算", category: "スポーツ", url: "/baseball/slugging-percentage" },
+                { title: "【野球の評価】打率、出塁率の自動計算", category: "スポーツ", url: "/baseball/base-percentage" },
             ],
             sports: [
                 { 
-                    title: "【現代野球の評価】OPSの計算",
+                    title: "【現代野球の評価】OPSの自動計算",
                     text: "【出塁率】＋【長打率】＝【ＯＰＳ】",
                     img: require('@/assets/images/sports/baseball/baseball_homerun_man.png'),
                     category: "スポーツ", subcategory: "野球",
@@ -19,7 +19,7 @@ export default {
                     source: "https://npb.jp/scoring/calculation.html"
                 },
                 {
-                    title: "【現代野球の投手評価】WHIPの計算",
+                    title: "【現代野球の投手評価】WHIPの自動計算",
                     text: "WHIP = 与四球数 + 被安打数 ÷ 投球回数",
                     img: require('@/assets/images/sports/baseball/baseball_pitcher_overthrow.png'),
                     category: "スポーツ", subcategory: "野球",
@@ -27,7 +27,7 @@ export default {
                     source: "https://npb.jp/scoring/calculation.html"
                 },
                 {
-                    title: "【現代野球の評価】長打率の計算",
+                    title: "【現代野球の評価】長打率の自動計算",
                     text: "長打率 = 塁打数 ÷ 打数",
                     img: require('@/assets/images/sports/baseball/baseball_hit_woman.png'),
                     category: "スポーツ",
@@ -37,7 +37,7 @@ export default {
                     source: "https://npb.jp/scoring/calculation.html"
                 },
                 {
-                    title: "【野球の評価】打率、出塁率の計算",
+                    title: "【野球の評価】打率、出塁率の自動計算",
                     text:`打率 ＝ 安打数÷打数<br><br>打率とは、打席数から犠打、犠飛、四死球を除いた打数のうち、安打の割合を表します。<br><br>出塁率 =（安打数 + 四球数 + 死球数）÷（打数 + 四球数 + 死球数 + 犠飛数）`,
                     img: require('@/assets/images/sports/baseball/baseball_batter_man.png'),
                     category: "スポーツ",
@@ -47,7 +47,7 @@ export default {
                     source: "https://npb.jp/scoring/calculation.html"
                 },
                 {
-                    title: "【野球の評価】防御率の計算",
+                    title: "【野球の評価】防御率の自動計算",
                     text: `防御率 ＝ 自責点×9÷投球回数`,
                     img: require('@/assets/images/sports/baseball/baseball_pitcher_overthrow.png'),
                     category: "スポーツ",
@@ -57,7 +57,7 @@ export default {
                     source: "https://npb.jp/scoring/calculation.html"
                 },
                 {
-                    title: "【野球】勝率の計算",
+                    title: "【野球】勝率の自動計算",
                     text: "勝率 ＝ 勝試合数÷（勝試合数＋敗試合数）",
                     img: require('@/assets/images/sports/baseball/baseball_01.jpg'),
                     category: "スポーツ", 
@@ -66,7 +66,7 @@ export default {
                     source: "https://npb.jp/scoring/calculation.html"
                 },
                 {
-                    title: "【現代野球の守備評価】守備率の計算",
+                    title: "【現代野球の守備評価】守備率の自動計算",
                     text: "守備率 ＝ （刺殺＋補殺）÷（刺殺＋補殺＋失策）",
                     img: require('@/assets/images/sports/baseball/baseball_02.png'),
                     category: "スポーツ", 
@@ -75,7 +75,7 @@ export default {
                     source: "https://npb.jp/scoring/calculation.html"
                 },
                 {
-                    title: "【現代野球の投手評価、指標】QS率の計算",
+                    title: "【現代野球の投手評価、指標】QS率の自動計算",
                     text: "QS率 = QS数 ÷ 先発登板数<br><br>QS = 先発投手が６イニング以上を投げ、かつ自責点を３失点以内に抑える。",
                     img: require('@/assets/images/sports/baseball/baseball_03.png'),
                     category: "スポーツ", 
@@ -85,7 +85,7 @@ export default {
                     source: "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%82%AA%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BB%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88"
                 },
                 {
-                    title: "【サッカー】勝ち点の計算",
+                    title: "【サッカー】勝ち点の自動計算",
                     text: "勝ち :  3 点<br>引き分け : 1 点<br>負け : 0 点",
                     img: require('@/assets/images/sports/soccer/soccer_dribble2.png'),
                     category: "スポーツ", 
