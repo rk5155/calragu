@@ -117,4 +117,9 @@ li {
     font-weight: bold;
     @include linkColor
 }
+@media screen and (max-width: 580px) { 
+    li {
+        font-size: 14px;
+    }
+}
 </style>

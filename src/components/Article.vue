@@ -70,4 +70,23 @@ export default {
         height: 170px;
     }
 }
+@media screen and (max-width: 580px) {
+    .article-list {
+        h2 {
+            font-size: 16px;
+        }
+        .card {
+            height: auto;
+        }
+        img {
+            height: 120px;
+        }
+        .img-background, .img-background--white, .img-background--blue, .img-background--beige, .img-background--red {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 140px;
+        }
+    }
+}
 </style>

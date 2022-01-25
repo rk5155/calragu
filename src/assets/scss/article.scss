@@ -18,3 +18,12 @@
         word-wrap:break-word;
     }
 }
+@media screen and (max-width: 580px) {
+    .calculation {
+        padding: 30px 18px;
+
+        h1 {
+            font-size: 26px;
+        }
+    }
+}

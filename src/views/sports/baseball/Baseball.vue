@@ -108,4 +108,48 @@ export default {
         }
     }
 }
+@media screen and (max-width: 580px) {
+    #content {
+        width: auto;
+        h1 {
+            font-size: 26px;
+        }
+        .card {
+            margin-bottom: 10px;
+            h2 {
+                font-size: 16px;
+            }
+            img {
+                width: 80px;
+                height: auto;
+            }
+            .img-background, .img-background--blue, .img-background--beige, .img-background--red, .img-background--white {
+                width: 38%;
+                height: 120px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .row {
+            flex-wrap: nowrap;
+        }
+    }
+    .content-article {
+        a {
+            width: 100%;
+            margin-bottom: 16px;
+            border: none;
+            transition: .3s;
+            color: $textColor;
+            &:nth-child(odd), &:nth-child(even) {
+                margin: 0;
+            }
+            &:hover {
+                box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+                transform: translateY(-4px);
+            }
+        }
+    }
+}
 </style>

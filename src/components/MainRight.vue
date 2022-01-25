@@ -63,8 +63,6 @@ export default {
 </script>
 
 <style lang="scss">
-.main-right-block {
-}
 .main-right-block-wrapper {
     padding: 14px;
     ul {
@@ -147,6 +145,11 @@ export default {
         padding: 2px 8px;
         margin-bottom: 6px;
         vertical-align: middle;
+    }
+}
+@media screen and (max-width: 580px) { 
+    .main-right-block {
+        margin-bottom: 20px;
     }
 }
 </style>>

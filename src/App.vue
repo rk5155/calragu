@@ -80,4 +80,21 @@ main {
         width: 26%;
     }
 }
+@media screen and (max-width: 580px) {
+    main {
+      padding: 0 12px;
+      .main-wrapper {
+        display: block;
+        width: auto;
+        padding: 20px 0;
+      }
+      .main-left {
+        width: 100%;
+        margin-bottom: 34px;
+      }
+      .main-right {
+          width: 100%;
+      }
+  }
+}
 </style>
