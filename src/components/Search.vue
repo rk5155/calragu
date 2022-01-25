@@ -47,13 +47,13 @@ $breakpoints: (
     border-right: none;
     font-size: 16px;
     border-radius: 10px 0 0 10px;
+    background-color: #ffffff;
     &:focus {
         outline: none;
     }
     
     @include mq(md){
       height: 40px;
-      border-right: 2px solid #000;
       font-size: 1.8rem;
     }
   }
