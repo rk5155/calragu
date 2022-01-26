@@ -106,8 +106,15 @@ export default {
                 },
             ],
             money: [
-                { title: "タイトルタイトル6", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "お金", url: "" },
-                { title: "タイトルタイトル7", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "お金", url: "" },
+                {
+                    title: "【お金】消費税の自動計算",
+                    text: "消費税 = 税抜き価格（本体価格）× 消費税率",
+                    img: require('@/assets/images/money/img_01.png'),
+                    category: "お金",
+                    url: "/money/consumption-tax",
+                    color: "img-background--beige",
+                    source: "https://www.nta.go.jp/publication/pamph/koho/kurashi/html/01_3.htm"
+                },
             ],
             arithmetic: [
                 { title: "タイトルタイトル12", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "数学・算数", url: "" },
