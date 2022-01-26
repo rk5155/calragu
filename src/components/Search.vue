@@ -54,7 +54,7 @@ $breakpoints: (
     
     @include mq(md){
       height: 40px;
-      font-size: 1.8rem;
+      font-size: 16px;
     }
   }
   & button[type="button"] {
@@ -69,6 +69,7 @@ $breakpoints: (
     
     @include mq(md){
       height: 40px;
+      width: 14%;
     }
 
     & img{
