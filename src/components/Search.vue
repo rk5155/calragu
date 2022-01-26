@@ -1,7 +1,7 @@
 <template>
-    <form class="searchForm">
+    <form class="searchForm" onsubmit="return false;">
         <input  v-model="inputedValue" type="search" class="text" placeholder="">
-        <button type="button" value="検索"><img src="@/assets/images/icon_search.svg" alt=""></button>
+        <button type="button" onclick="submit();" value="検索"><img src="@/assets/images/icon_search.svg" alt=""></button>
     </form>
 </template>
 
