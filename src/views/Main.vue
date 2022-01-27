@@ -99,7 +99,7 @@ export default {
 <style lang="scss" scoped>
 .is-select {
     border-bottom: 2px solid $mainColor;
-    color: $textColor;
+    color: $mainColor;
 }
 ul {
     display: flex;
