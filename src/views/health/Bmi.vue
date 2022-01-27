@@ -41,12 +41,7 @@ export default {
   computed: {
       bmi: function() {
           let bmi = this.num1 / Math.pow(this.num2, 2);
-
-          if (isNaN(bmi) || bmi == "Infinity") {
-              return 0;
-          } else {
-              return bmi.toFixed(2);
-          }
+          return this.isNan(bmi)
       }
   }
 }
