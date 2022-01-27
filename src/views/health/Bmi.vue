@@ -41,7 +41,7 @@ export default {
   computed: {
       bmi: function() {
           let bmi = this.num1 / Math.pow(this.num2, 2);
-          return this.isNan(bmi)
+          return this.isNan(bmi, 2)
       }
   }
 }

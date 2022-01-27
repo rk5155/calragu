@@ -41,12 +41,7 @@ export default {
   computed: {
       win: function() {
           let win = this.num1 / (this.num1 + this.num2)
-          
-          if (isNaN(win) || win == "Infinity") {
-              return 0;
-          } else {
-              return win.toFixed(2);
-          }
+          return this.isNan(win, 2)
       }
   }
 }

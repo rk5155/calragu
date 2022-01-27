@@ -43,12 +43,7 @@ export default {
   computed: {
       defensive: function() {
           let defensive = (this.num1 + this.num2) / (this.num1 + this.num2 + this.num3)
-          
-          if (isNaN(defensive) || defensive == "Infinity") {
-              return 0;
-          } else {
-              return defensive.toFixed(2);
-          }
+          return this.isNan(defensive, 2)
       }
   }
 }

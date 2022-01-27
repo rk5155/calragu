@@ -60,31 +60,16 @@ export default {
       },
       average: function() {
           let average = this.hitNum / this.bat;
-
-          if (isNaN(average)) {
-            return 0
-          } else {
-              return average.toFixed(3);
-          }
+          return this.isNan(average)
       },
       onBasePercentage: function() {
           let onBasePercentage = (this.hitNum + this.fourDeadBalls + this.sacrificeFly) / (this.bat + this.fourDeadBalls + this.sacrificeFly);
-
-          if (isNaN(onBasePercentage)) {
-            return 0
-          } else {
-              return onBasePercentage.toFixed(3);
-          }
+          return this.isNan(onBasePercentage)
       },
       sluggingPercentage: function() {
           let baseHit = this.hit1 + (this.hit2 * 2) + (this.hit3 * 3) + (this.hit4 * 4)
           let sluggingPercentage = baseHit / this.bat;
-
-          if (isNaN(sluggingPercentage)) {
-            return 0
-          } else {
-            return sluggingPercentage.toFixed(3);
-          }
+          return this.isNan(sluggingPercentage)
       },
       ops: function() {
           let ops = Number(this.onBasePercentage) + Number(this.sluggingPercentage);

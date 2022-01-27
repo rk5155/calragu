@@ -41,12 +41,7 @@ export default {
   computed: {
       defense: function() {
           let defense = (this.num1 * 9) / this.num2;
-          
-          if (isNaN(defense) || defense == "Infinity") {
-              return 0;
-          } else {
-              return defense.toFixed(2);
-          }
+          return this.isNan(defense, 2)
       }
   }
 }

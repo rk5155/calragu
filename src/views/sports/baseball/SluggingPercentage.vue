@@ -56,12 +56,7 @@ export default {
       sluggingPercentage: function() {
           let baseHit = this.baseHit
           let sluggingPercentage = baseHit / this.bat;
-
-          if (isNaN(sluggingPercentage)) {
-            return 0
-          } else {
-            return sluggingPercentage.toFixed(3);
-          }
+          return this.isNan(sluggingPercentage)
       }
   }
 }

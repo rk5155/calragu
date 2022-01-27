@@ -67,12 +67,7 @@ export default {
       },
       onBasePercentage: function() {
           let onBasePercentage = (this.hitNum + this.fourDeadBalls + this.sacrificeFly) / (this.bat + this.fourDeadBalls + this.sacrificeFly);
-
-          if (isNaN(onBasePercentage)) {
-            return 0
-          } else {
-              return onBasePercentage.toFixed(3);
-          }
+          return this.isNan(onBasePercentage)
       }
   }
 }

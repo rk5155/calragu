@@ -12,10 +12,6 @@
                 <td>QS率</td>
                 <td>{{ qs }}%</td>
             </tr>
-            <tr>
-                <td>HQS率</td>
-                <td>{{ hqs }}%</td>
-            </tr>
         </table>
     </div>
 </template>
@@ -45,12 +41,7 @@ export default {
   computed: {
       qs: function() {
           let qs = (this.num1 / this.num2) * 100;
-          
-          if (isNaN(qs) || qs == "Infinity") {
-              return 0;
-          } else {
-              return qs.toFixed(1);
-          }
+          return this.isNan(qs, 1)
       }
   }
 }

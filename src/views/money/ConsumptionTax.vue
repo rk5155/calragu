@@ -46,12 +46,7 @@ export default {
   computed: {
       total: function() {
           let total = this.num1 * (this.num2 / 100 + 1)
-
-          if (isNaN(total) || total == "Infinity") {
-              return 0;
-          } else {
-              return total.toFixed(0);
-          }
+          return this.isNan(total, 0)
       },
       tax: function() {
           return this.total - this.num1
