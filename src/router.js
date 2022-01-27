@@ -10,6 +10,7 @@ import Defense from './views/sports/baseball/Defense.vue'
 import Winbase from './views/sports/baseball/Winbase.vue'
 import Defensive from './views/sports/baseball/Defensive.vue'
 import Qs from './views/sports/baseball/Qs.vue'
+import Babip from './views/sports/baseball/Babip.vue'
 import Points from './views/sports/soccer/Points.vue'
 import Bmi from './views/health/Bmi.vue'
 import ConsumptionTax from './views/money/ConsumptionTax.vue'
@@ -69,6 +70,11 @@ export default new Router({
       path: '/baseball/qs',
       component: Qs,
       meta: { title: '【現代野球の投手評価、指標】QS率の自動計算', desc: 'QS（クオリティ・スタート）とは、先発投手を評価する指標として使用されます。' }
+    },
+    {
+      path: '/baseball/babip',
+      component: Babip,
+      meta: { title: '【現代野球の評価、指標、セイバーメトリクス】Babipの自動計算', desc: '本塁打とファウルを除く打球（ファウルフライは含む）のうち安打となった割合を表す指標。多くの機会数を経ればBABIPの値はどの選手もリーグ平均値付近に収束していくこと、年度ごとの変動は運の影響が大きいことが明らかになっている。' }
     },
     {
         path: '/soccer/points',

@@ -85,6 +85,16 @@ export default {
                     source: "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%82%AA%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BB%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88"
                 },
                 {
+                    title: "【現代野球の評価、指標、セイバーメトリクス】Babipの自動計算",
+                    text: "BABIP =（安打 − 本塁打）÷（打数 − 三振 − 本塁打 ＋ 犠飛）",
+                    img: require('@/assets/images/sports/baseball/baseball_04.png'),
+                    category: "スポーツ", 
+                    subcategory: "野球", 
+                    url: "/baseball/babip", 
+                    color: "img-background--blue",
+                    source: "https://ja.wikipedia.org/wiki/BABIP"
+                },
+                {
                     title: "【サッカー】勝ち点の自動計算",
                     text: "勝ち :  3 点<br>引き分け : 1 点<br>負け : 0 点",
                     img: require('@/assets/images/sports/soccer/soccer_dribble2.png'),
