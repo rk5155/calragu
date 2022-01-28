@@ -134,9 +134,15 @@ export default {
                 { title: "タイトルタイトル14", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "科学", url: "" },
             ],
             date: [
-                { title: "タイトルタイトル11", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "日付", url: "" },
-                { title: "タイトルタイトル11", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "日付", url: "" },
-                { title: "タイトルタイトル11", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "日付", url: "" },
+                { 
+                    title: "【日付】現年齢、当時年齢の自動計算",
+                    text: "生年月日からシンプルに年齢を算出",
+                    img: require('@/assets/images/date/img_01.png'),
+                    category: "日付",
+                    color: "img-background",
+                    url: "/date/age" ,
+                    source: ""
+                },
             ],
         }
     },

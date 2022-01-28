@@ -14,6 +14,7 @@ import Babip from './views/sports/baseball/Babip.vue'
 import Points from './views/sports/soccer/Points.vue'
 import Bmi from './views/health/Bmi.vue'
 import ConsumptionTax from './views/money/ConsumptionTax.vue'
+import Age from './views/date/age.vue'
 
 
 Vue.use(Router)
@@ -90,6 +91,11 @@ export default new Router({
       path: '/money/consumption-tax',
       component: ConsumptionTax,
       meta: { title: '【お金】消費税の自動計算', desc: '消費税は、商品・製品の販売やサービスの提供などの取引に対して広く公平に課税される税で、消費者が負担し事業者が納付します。' }
+    },
+    {
+      path: '/date/age',
+      component: Age,
+      meta: { title: '【日付】現年齢、当時年齢の自動計算', desc: '生年月日から年齢を自動で計算します。' }
     },
   ],
   //ページ遷移したときトップに移動かつ、ブラウザの戻るボタンを押したとき、もとの位置に戻る
