@@ -143,6 +143,15 @@ export default {
                     url: "/date/age" ,
                     source: ""
                 },
+                { 
+                    title: "【入学年度】誕生日でわかる！入学年度の自動計算",
+                    text: "履歴書などに役立てて下さい。<br>留年や浪人は考慮されていません。",
+                    img: require('@/assets/images/date/img_02.png'),
+                    category: "日付",
+                    color: "img-background--blue",
+                    url: "/date/admission" ,
+                    source: ""
+                },
             ],
         }
     },
