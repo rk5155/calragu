@@ -46,7 +46,7 @@ export default {
                 { title: "数学・算数", url: "/" },
             ],
             money: [
-                { title: "お金", url: "/" },
+                { title: "税金", url: "/money" },
             ],
             arithmetic: [
                 { title: "科学", url: "/" },

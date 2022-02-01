@@ -18,6 +18,7 @@ import ConsumptionTax from './views/money/ConsumptionTax.vue'
 import IncomeTax from './views/money/IncomeTax.vue'
 import Age from './views/date/age.vue'
 import Admission from './views/date/Admission.vue'
+import Money from './views/money/Money.vue'
 
 
 Vue.use(Router)
@@ -39,6 +40,11 @@ export default new Router({
       path: '/health',
       component: Health,
       meta: { title: '健康に関する自動計算', desc: '健康に関する自動計算記事一覧、まとめです。' }
+    },
+    {
+      path: '/money',
+      component: Money,
+      meta: { title: 'お金、税金に関する自動計算', desc: 'お金に関する自動計算記事一覧、まとめです。' }
     },
     {
         path: '/baseball/ops',
