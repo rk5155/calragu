@@ -46,10 +46,10 @@ export default {
   computed: {
       total: function() {
           let total = this.num1 * (this.num2 / 100 + 1)
-          return this.isNan(total, 0)
+          return Number(this.isNan(total, 0)).toLocaleString();
       },
       tax: function() {
-          return this.total - this.num1
+          return (Number(this.total.replace(/,/g, '')) - this.num1).toLocaleString();
       }
   }
 }
