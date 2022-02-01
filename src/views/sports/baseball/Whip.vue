@@ -91,19 +91,6 @@ export default {
               return whip.toFixed(2);
           }
       }
-  },
-  methods: {
-      allWhite: function() {
-          document.querySelectorAll(".table-striped tr td").forEach((el) => {
-              el.style.backgroundColor = 'white';
-          })
-       },
-       isActiveSelector: function(num) {
-           document.querySelectorAll(`.table-striped tr:nth-child(${num}) td`).forEach((el) => {
-              el.style.backgroundColor = '#F2F5A9';
-          })
-       
-       }
   }
 }
 </script>
