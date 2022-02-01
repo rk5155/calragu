@@ -87,8 +87,8 @@ export default {
             { id: 1, category: 'スポーツ' },
             { id: 2, category: '健康' },
             { id: 3, category: 'お金' },
-            { id: 4, category: '数学・算数' },
-            { id: 5, category: '科学' },
+            // { id: 4, category: '数学・算数' },
+            // { id: 5, category: '科学' },
             { id: 6, category: '日付' }
         ]
       }
@@ -104,7 +104,6 @@ export default {
 ul {
     display: flex;
     flex-wrap: wrap;
-    background-color: #ffffff;
     padding-left: 0;
     margin-bottom: 20px;
 }
@@ -115,7 +114,8 @@ li {
     padding: 4px 0;
     border: 1px solid $bodyColor;
     font-weight: bold;
-    @include linkColor
+    @include linkColor;
+    background-color: #ffffff;
 }
 @media screen and (max-width: 580px) { 
     li {

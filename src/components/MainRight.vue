@@ -17,8 +17,8 @@
                 <Category :categorys="sports" title="スポーツ" icon="fas fa-running"></Category>
                 <Category :categorys="health" title="健康" icon="far fa-heart"></Category>
                 <Category :categorys="money" title="お金" icon="fas fa-yen-sign"></Category>
-                <Category :categorys="arithmetic" title="数学・算数" icon="fas fa-divide"></Category>
-                <Category :categorys="science" title="科学" icon="fas fa-vial"></Category>
+                <!-- <Category :categorys="arithmetic" title="数学・算数" icon="fas fa-divide"></Category>
+                <Category :categorys="science" title="科学" icon="fas fa-vial"></Category> -->
                 <Category :categorys="date" title="日付" icon="far fa-calendar-alt"></Category>
             </div>
         </div>
