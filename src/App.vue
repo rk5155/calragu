@@ -4,7 +4,7 @@
 
     <main id="main">
 
-      <div v-if="path == '/baseball'" id="content">
+      <div v-if="path == '/baseball' || path == '/health' || path == '/date' || path == '/money'" id="content">
         <router-view></router-view>
       </div>
       
@@ -63,6 +63,7 @@ export default {
 
 <style lang="scss">
 @import "@/assets/scss/article.scss";
+@import "@/assets/scss/individual.scss";
 
 main {
     background-color: $bodyColor;

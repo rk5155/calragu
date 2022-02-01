@@ -40,7 +40,7 @@ export default {
                 { title: "アメフト", url: "/" },
             ],
             health: [
-                { title: "健康", url: "/" },
+                { title: "健康", url: "/health" },
             ],
             science: [
                 { title: "数学・算数", url: "/" },

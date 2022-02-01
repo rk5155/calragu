@@ -12,6 +12,7 @@ import Defensive from './views/sports/baseball/Defensive.vue'
 import Qs from './views/sports/baseball/Qs.vue'
 import Babip from './views/sports/baseball/Babip.vue'
 import Points from './views/sports/soccer/Points.vue'
+import Health from './views/health/health.vue'
 import Bmi from './views/health/Bmi.vue'
 import ConsumptionTax from './views/money/ConsumptionTax.vue'
 import IncomeTax from './views/money/IncomeTax.vue'
@@ -33,6 +34,11 @@ export default new Router({
       path: '/baseball',
       component: Baseball,
       meta: { title: '現代野球における指標の自動計算', desc: '現代野球において、選手を評価する指標があります。野球におけるいろいろな指標の自動計算方法をまとめました。' }
+    },
+    {
+      path: '/health',
+      component: Health,
+      meta: { title: '健康に関する自動計算', desc: '健康に関する自動計算記事一覧、まとめです。' }
     },
     {
         path: '/baseball/ops',

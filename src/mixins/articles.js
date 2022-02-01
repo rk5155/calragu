@@ -189,19 +189,19 @@ export default {
             this.duplicateDelete(articles)
 
             return articles
-        },
-        searchBabseball: function() {
+        }
+    },
+    methods: {
+        searchGenreArticle: function(genreArticle) {
             let articles = [];
             
-            this.sports.forEach(el => {
+            genreArticle.forEach(el => {
                 this.pushArticle(el, articles);
             });
             this.duplicateDelete(articles)
 
             return articles;
-        }
-    },
-    methods: {
+        },
         pushArticle: function(el, articles) {
             if (el.title.toLowerCase().includes(this.keyword.toLowerCase()) && this.keyword) {
                 articles.push(el)
