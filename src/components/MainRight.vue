@@ -52,7 +52,7 @@ export default {
                 { title: "科学", url: "/" },
             ],
             date: [
-                { title: "日付", url: "/" },
+                { title: "日付", url: "/date" },
             ]
         }
     },

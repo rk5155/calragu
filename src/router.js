@@ -19,6 +19,7 @@ import IncomeTax from './views/money/IncomeTax.vue'
 import Age from './views/date/age.vue'
 import Admission from './views/date/Admission.vue'
 import Money from './views/money/Money.vue'
+import Date from './views/date/Date.vue'
 
 
 Vue.use(Router)
@@ -45,6 +46,11 @@ export default new Router({
       path: '/money',
       component: Money,
       meta: { title: 'お金、税金に関する自動計算', desc: 'お金に関する自動計算記事一覧、まとめです。' }
+    },
+    {
+      path: '/date',
+      component: Date,
+      meta: { title: '日付に関する自動計算', desc: '日付に関する自動計算記事一覧、まとめです。' }
     },
     {
         path: '/baseball/ops',
