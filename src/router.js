@@ -14,6 +14,7 @@ import Babip from './views/sports/baseball/Babip.vue'
 import Points from './views/sports/soccer/Points.vue'
 import Bmi from './views/health/Bmi.vue'
 import ConsumptionTax from './views/money/ConsumptionTax.vue'
+import IncomeTax from './views/money/IncomeTax.vue'
 import Age from './views/date/age.vue'
 import Admission from './views/date/Admission.vue'
 
@@ -92,6 +93,11 @@ export default new Router({
       path: '/money/consumption-tax',
       component: ConsumptionTax,
       meta: { title: '【お金】消費税の自動計算', desc: '消費税は、商品・製品の販売やサービスの提供などの取引に対して広く公平に課税される税で、消費者が負担し事業者が納付します。' }
+    },
+    {
+      path: '/money/income-tax',
+      component: IncomeTax,
+      meta: { title: '【所得税の自動計算ツール】税率に合わせて自動で所得税を計算します', desc: '所得税の税率は、分離課税に対するものなどを除くと、5パーセントから45パーセントの7段階に区分されています。' }
     },
     {
       path: '/date/age',

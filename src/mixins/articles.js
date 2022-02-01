@@ -125,6 +125,15 @@ export default {
                     color: "img-background--beige",
                     source: "https://www.nta.go.jp/publication/pamph/koho/kurashi/html/01_3.htm"
                 },
+                {
+                    title: "【所得税の自動計算ツール】税率に合わせて自動で所得税を計算します",
+                    text: "所得税 = 所得 × 税率 - 控除額",
+                    img: require('@/assets/images/money/img_02.png'),
+                    category: "お金",
+                    url: "/money/income-tax",
+                    color: "img-background--red",
+                    source: "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm"
+                },
             ],
             arithmetic: [
                 { title: "タイトルタイトル12", img: "https://saruwakakun.com/wp-content/uploads/2017/06/bookstoread-01-min-1-520x300.png", category: "数学・算数", url: "" },

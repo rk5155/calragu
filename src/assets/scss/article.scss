@@ -4,10 +4,12 @@
     h1 {
         font-size: 28px;
         text-align: center;
+        font-weight: bold;
     }
     h2 {
         font-size: 24px;
         margin: 48px 0 20px;
+        font-weight: bold;
     }
     img {
         display: block;
@@ -16,6 +18,15 @@
     }
     a {
         word-wrap:break-word;
+    }
+    label {
+        font-weight: bold;
+    }
+    th {
+        font-weight: 400;
+    }
+    .calculation--bold {
+        font-weight: bold;
     }
 }
 @media screen and (max-width: 580px) {
