@@ -11,6 +11,16 @@ export default {
             ],
             sports: [
                 { 
+                    title: "【現代野球の評価、指標】P/PAの自動計算",
+                    text: "P/PA = 投球数 ÷ 打席数<br><br>P/PAは４を超えると高い水準である。",
+                    img: require('@/assets/images/sports/baseball/img_05.png'),
+                    category: "スポーツ",
+                    subcategory: "野球",
+                    url: "/baseball/ppa",
+                    color: "img-background--red",
+                    source: "https://ja.wikipedia.org/wiki/%E9%81%B8%E7%90%83%E7%9C%BC"
+                },
+                { 
                     title: "【現代野球の評価】OPSの自動計算",
                     text: "【出塁率】＋【長打率】＝【ＯＰＳ】",
                     img: require('@/assets/images/sports/baseball/baseball_homerun_man.png'),

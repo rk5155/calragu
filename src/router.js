@@ -11,6 +11,7 @@ import Winbase from './views/sports/baseball/Winbase.vue'
 import Defensive from './views/sports/baseball/Defensive.vue'
 import Qs from './views/sports/baseball/Qs.vue'
 import Babip from './views/sports/baseball/Babip.vue'
+import Ppa from './views/sports/baseball/Ppa.vue'
 import Points from './views/sports/soccer/Points.vue'
 import Health from './views/health/health.vue'
 import Bmi from './views/health/Bmi.vue'
@@ -51,6 +52,11 @@ export default new Router({
       path: '/date',
       component: Date,
       meta: { title: '日付に関する自動計算', desc: '日付に関する自動計算記事一覧、まとめです。' }
+    },
+    {
+      path: '/baseball/ppa',
+      component: Ppa,
+      meta: { title: '【現代野球の評価、指標】P/PAの自動計算', desc: 'P/PAとは、一打席当たりの被投球数。数値が高いほどカット技術が高く、粘れる（得意筋でないボールもバットに当てファウルボールにできる、簡単には三振を取らせない）打者であるといえる。' }
     },
     {
         path: '/baseball/ops',
