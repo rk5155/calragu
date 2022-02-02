@@ -8,20 +8,13 @@
             <Calculation v-for="list in formList" :key="list.label" :list="list" v-model.number="$data[list.data]"></Calculation>
         </form>
 
-        <h2>計算結果</h2>
-        <table class="table table-striped">
-            <tr v-for="result in resultList" :key="result.label">
-                <td>{{ result.label }}</td>
-                
-                <td v-if="result.label == 'ローレル指数'">{{ laurel }}</td>
-                <td v-else>{{ result.text }}</td>
-            </tr>
-        </table>
+        <CalculationSelect :resultList="resultList" :calculationResult="laurel" labelName="ローレル指数"></CalculationSelect>
     </div>
 </template>
 
 <script>
 import Calculation from "@/components/Calculation.vue"
+import CalculationSelect from "@/components/CalculationSelect.vue"
 import getTitle from '@/getTitle'
 import ArticleText from "@/components/ArticleText.vue"
 import articles from '@/mixins/articles.js'
@@ -29,7 +22,8 @@ import articles from '@/mixins/articles.js'
 export default {
   components: {
     Calculation,
-    ArticleText
+    ArticleText,
+    CalculationSelect
   },
   mixins: [ getTitle, articles ],
   data () {
@@ -85,9 +79,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.active {
-    background-color: rebeccapurple;
-}
-</style>
