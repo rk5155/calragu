@@ -63,7 +63,7 @@ export default {
 
 <style lang="scss">
 @import "@/assets/scss/article.scss";
-@import "@/assets/scss/individual.scss";
+@import "./assets/scss/Individual.scss";
 
 main {
     background-color: $bodyColor;
