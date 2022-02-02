@@ -6,6 +6,7 @@
                 <img :src="el.img" alt="">
                 <p v-html="el.text"></p>
                 <p>{{ desc }}</p>
+                <slot></slot>
                 <p>出典: <a target="_blank" :href="el.source">{{ el.source }}</a></p>
             </div>
         </template>

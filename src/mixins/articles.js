@@ -117,12 +117,21 @@ export default {
             health: [
                 {
                     title: "【肥満度診断】BMI指数の自動計算",
-                    text: "BMI = 体重kg ÷ (身長m)<sup>2</sup>",
-                    img: require('@/assets/images/health/health_01.png'),
+                    text: "BMI = 体重kg ÷ (身長cm)<sup>2</sup>",
+                    img: require('@/assets/images/health/img_02.png'),
                     category: "健康", 
                     url: "/health/bmi", 
                     color: "img-background--beige",
                     source: "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%87%E3%82%A3%E3%83%9E%E3%82%B9%E6%8C%87%E6%95%B0"
+                },
+                {
+                    title: "【子供の肥満度診断】ローレル指数の自動計算",
+                    text: "ローレル指数 = (体重) ÷ (身長m)<sup>3</sup> × 10000000",
+                    img: require('@/assets/images/health/health_01.png'),
+                    category: "健康", 
+                    url: "/health/laurel", 
+                    color: "img-background--blue",
+                    source: "https://ja.wikipedia.org/wiki/%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%AB%E6%8C%87%E6%95%B0"
                 },
             ],
             money: [

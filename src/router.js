@@ -15,6 +15,7 @@ import Ppa from './views/sports/baseball/Ppa.vue'
 import Points from './views/sports/soccer/Points.vue'
 import Health from './views/health/health.vue'
 import Bmi from './views/health/Bmi.vue'
+import Laurel from './views/health/Laurel.vue'
 import ConsumptionTax from './views/money/ConsumptionTax.vue'
 import IncomeTax from './views/money/IncomeTax.vue'
 import Age from './views/date/age.vue'
@@ -112,6 +113,11 @@ export default new Router({
       path: '/health/bmi',
       component: Bmi,
       meta: { title: '【肥満度診断】BMI指数の自動計算', desc: 'BMIとは、体重と身長の関係から算出される、ヒトの肥満度を表す体格指数である。' }
+    },
+    {
+      path: '/health/laurel',
+      component: Laurel,
+      meta: { title: '【子供の肥満度診断】ローレル指数の自動計算', desc: 'ローレル指数とは児童・生徒の肥満の程度を表す体格指数。' }
     },
     {
       path: '/money/consumption-tax',
