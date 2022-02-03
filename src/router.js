@@ -16,6 +16,7 @@ import Points from './views/sports/soccer/Points.vue'
 import Health from './views/health/health.vue'
 import Bmi from './views/health/Bmi.vue'
 import Laurel from './views/health/Laurel.vue'
+import Ffmi from './views/health/Ffmi.vue'
 import ConsumptionTax from './views/money/ConsumptionTax.vue'
 import IncomeTax from './views/money/IncomeTax.vue'
 import Age from './views/date/age.vue'
@@ -118,6 +119,11 @@ export default new Router({
       path: '/health/laurel',
       component: Laurel,
       meta: { title: '【子供の肥満度診断】ローレル指数の自動計算', desc: 'ローレル指数とは児童・生徒の肥満の程度を表す体格指数。' }
+    },
+    {
+      path: '/health/ffmi',
+      component: Ffmi,
+      meta: { title: '【マッチョ指数】FFMIの自動計算ツール', desc: 'FFMI(Fat Free Mass Index)とは、体つきを表現するための指標で、日本語でいうと除脂肪量指数。' }
     },
     {
       path: '/money/consumption-tax',

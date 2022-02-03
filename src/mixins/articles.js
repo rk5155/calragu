@@ -133,6 +133,15 @@ export default {
                     color: "img-background--blue",
                     source: "https://ja.wikipedia.org/wiki/%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%AB%E6%8C%87%E6%95%B0"
                 },
+                {
+                    title: "【マッチョ指数】FFMIの自動計算ツール",
+                    text: "FFMI = 体重[kg] x (1 – 体脂肪率) ÷ (身長[cm])<sup>2</sup> = 除脂肪体重[kg] ÷ (身長[cm])<sup>2</sup>　",
+                    img: require('@/assets/images/health/img_03.png'),
+                    category: "健康", 
+                    url: "/health/ffmi", 
+                    color: "img-background--blue",
+                    source: ""
+                },
             ],
             money: [
                 {
