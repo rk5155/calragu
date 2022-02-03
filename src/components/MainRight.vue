@@ -139,8 +139,9 @@ export default {
     .main-right-articles__category {
         display: inline-block;
         font-size: 12px;
-        background-color: #eeeeee;
-        color: #777777;
+        background-color: $subColor;
+        color: #ffffff;
+        font-weight: bold;
         padding: 2px 8px;
         margin-bottom: 6px;
         vertical-align: middle;

@@ -1,7 +1,9 @@
 $bodyColor: #F0EBEB;
 $mainColor: #F9874A;
+$subColor: #FBC08A;
 $textColor: #333333;
 $textColor2: #8a8a8a;
+$lightGray: #F7F7F7;
 
 @mixin imgBackground($color) {
     background-color: $color;
