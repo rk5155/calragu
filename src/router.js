@@ -25,6 +25,7 @@ import Age from './views/date/age.vue'
 import Admission from './views/date/Admission.vue'
 import Money from './views/money/Money.vue'
 import Date from './views/date/Date.vue'
+import Terms from './views/Terms.vue'
 
 
 Vue.use(Router)
@@ -156,6 +157,11 @@ export default new Router({
       path: '/date/admission',
       component: Admission,
       meta: { title: '【入学年度】誕生日でわかる！入学年度の自動計算', desc: '誕生日を入力し、小学校から大学までの入学年度を自動で計算します。' }
+    },
+    {
+      path: '/terms',
+      component: Terms,
+      meta: { title: 'カルラグの利用規約', desc: 'カルラグ（calragu.com）の利用規約やプライバシーポリシーについて説明したページです。' }
     },
   ],
   //ページ遷移したときトップに移動かつ、ブラウザの戻るボタンを押したとき、もとの位置に戻る
