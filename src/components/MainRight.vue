@@ -1,25 +1,21 @@
 <template>
     <div class="main-right">
-        <div class="main-right-block">
-            <h3 class="main-right-block__title"><i class="far fa-newspaper"></i>新着記事</h3>
+        <SideArticles v-if="path == '/'" :articles="newArticle" articlesTitle="新着記事"></SideArticles>
+        <SideArticles v-else-if="path.includes('baseball')" :articles="sports"></SideArticles>
+        <SideArticles v-else-if="path.includes('health')" :articles="health"></SideArticles>
+        <SideArticles v-else-if="path.includes('money')" :articles="money"></SideArticles>
+        <SideArticles v-else-if="path.includes('date')" :articles="date"></SideArticles>
 
-            <template  v-for="article in newArticle.slice(-6)">
-                <router-link class="main-right-articles" :to="article.url" :key="article.title">
-                    <span class="main-right-articles__category">{{ article.category }}</span>
-                    <h4>{{ article.title }}</h4>
-                </router-link>
-            </template>
-        </div>
         <div class="main-right-block--white">
             <h3 class="main-right-block__title"><i class="fas fa-book-open"></i>カテゴリー</h3>
 
             <div class="main-right-block-wrapper">
-                <Category :categorys="sports" title="スポーツ" icon="fas fa-running"></Category>
-                <Category :categorys="health" title="健康" icon="far fa-heart"></Category>
-                <Category :categorys="money" title="お金" icon="fas fa-yen-sign"></Category>
+                <Category :categorys="sportsCategory" title="スポーツ" icon="fas fa-running"></Category>
+                <Category :categorys="healthCategory" title="健康" icon="far fa-heart"></Category>
+                <Category :categorys="moneyCategory" title="お金" icon="fas fa-yen-sign"></Category>
                 <!-- <Category :categorys="arithmetic" title="数学・算数" icon="fas fa-divide"></Category>
                 <Category :categorys="science" title="科学" icon="fas fa-vial"></Category> -->
-                <Category :categorys="date" title="日付" icon="far fa-calendar-alt"></Category>
+                <Category :categorys="dateCategory" title="日付" icon="far fa-calendar-alt"></Category>
             </div>
         </div>
     </div>
@@ -28,36 +24,39 @@
 <script>
 import articles from '@/mixins/articles.js'
 import Category from "../components/Category.vue"
+import getTitle from '@/getTitle'
+import SideArticles from "@/components/SideArticles.vue"
 
 export default {
-    mixins: [ articles ],
+    mixins: [ articles, getTitle ],
     data() {
         return {
-            sports: [
+            sportsCategory: [
                 { title: "野球", url: "/baseball" },
                 { title: "サッカー", url: "/soccer" },
                 { title: "バスケ", url: "/basket" },
                 { title: "アメフト", url: "/" },
             ],
-            health: [
+            healthCategory: [
                 { title: "健康", url: "/health" },
             ],
-            science: [
+            scienceCategory: [
                 { title: "数学・算数", url: "/" },
             ],
-            money: [
+            moneyCategory: [
                 { title: "税金", url: "/money" },
             ],
-            arithmetic: [
+            arithmeticCategory: [
                 { title: "科学", url: "/" },
             ],
-            date: [
+            dateCategory: [
                 { title: "日付", url: "/date" },
             ]
         }
     },
     components: {
-                Category,
+        Category,
+        SideArticles
     },
 }
 </script>
