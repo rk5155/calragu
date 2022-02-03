@@ -8,12 +8,12 @@
         <p class="content__text">{{ desc }}</p>
 
         <Search v-model="keyword"></Search>
-
-        <div v-if="searchGenreArticle(this.sports).length == 0">
+        <p v-if="searchGenreArticle(this.sports).length == 0 && this.keyword">キーワードに一致する記事はありません。</p>
+        <div v-else-if="searchGenreArticle(this.sports).length == 0">
             <IndividualArticle :article="sports"></IndividualArticle>
         </div>
         <div v-else-if="searchGenreArticle(this.sports).length != 0">
-            <IndividualArticle :article="searchGenreArticle"></IndividualArticle>
+            <IndividualArticle :article="searchGenreArticle(this.sports)"></IndividualArticle>
         </div>
     </div>
 </template>
