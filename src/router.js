@@ -17,6 +17,7 @@ import Health from './views/health/health.vue'
 import Bmi from './views/health/Bmi.vue'
 import Laurel from './views/health/Laurel.vue'
 import Ffmi from './views/health/Ffmi.vue'
+import Fatmass from './views/health/Fatmass.vue'
 import ConsumptionTax from './views/money/ConsumptionTax.vue'
 import IncomeTax from './views/money/IncomeTax.vue'
 import Age from './views/date/age.vue'
@@ -124,6 +125,11 @@ export default new Router({
       path: '/health/ffmi',
       component: Ffmi,
       meta: { title: '【マッチョ指数】FFMIの自動計算ツール', desc: 'FFMI(Fat Free Mass Index)とは、体つきを表現するための指標で、日本語でいうと除脂肪量指数。' }
+    },
+    {
+      path: '/health/fat-mass',
+      component: Fatmass,
+      meta: { title: '【体脂肪量の自動計算ツール】体重と体脂肪率で分かる！', desc: '体脂肪量は体重と体脂肪率が分かれば計算することができます。' }
     },
     {
       path: '/money/consumption-tax',

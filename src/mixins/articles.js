@@ -142,6 +142,15 @@ export default {
                     color: "img-background--blue",
                     source: ""
                 },
+                {
+                    title: "【体脂肪量の自動計算ツール】体重と体脂肪率で分かる！",
+                    text: "体脂肪量（kg)＝ 体重(kg) × 体脂肪率（％）",
+                    img: require('@/assets/images/health/img_04.png'),
+                    category: "健康", 
+                    url: "/health/fat-mass", 
+                    color: "img-background--red",
+                    source: ""
+                },
             ],
             money: [
                 {
