@@ -18,6 +18,7 @@ import Bmi from './views/health/Bmi.vue'
 import Laurel from './views/health/Laurel.vue'
 import Ffmi from './views/health/Ffmi.vue'
 import Fatmass from './views/health/Fatmass.vue'
+import Lbm from './views/health/Lbm.vue'
 import ConsumptionTax from './views/money/ConsumptionTax.vue'
 import IncomeTax from './views/money/IncomeTax.vue'
 import Age from './views/date/age.vue'
@@ -130,6 +131,11 @@ export default new Router({
       path: '/health/fat-mass',
       component: Fatmass,
       meta: { title: '【体脂肪量の自動計算ツール】体重と体脂肪率で分かる！', desc: '体脂肪量は体重と体脂肪率が分かれば計算することができます。' }
+    },
+    {
+      path: '/health/lbm',
+      component: Lbm,
+      meta: { title: '【除脂肪体重（LBM）の自動計算ツール】体重と体脂肪率で分かる！', desc: '除脂肪体重（Lean Body Mass；LBM）とは、体重において、体脂肪以外の、筋肉や骨、内臓などの総重量のことです。' }
     },
     {
       path: '/money/consumption-tax',

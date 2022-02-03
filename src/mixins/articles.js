@@ -151,6 +151,15 @@ export default {
                     color: "img-background--red",
                     source: ""
                 },
+                {
+                    title: "【除脂肪体重（LBM）の自動計算ツール】体重と体脂肪率で分かる！",
+                    text: "除脂肪体重（㎏）= 体重（㎏）- 体脂肪量（㎏）",
+                    img: require('@/assets/images/health/img_05.png'),
+                    category: "健康", 
+                    url: "/health/lbm", 
+                    color: "img-background",
+                    source: ""
+                },
             ],
             money: [
                 {
