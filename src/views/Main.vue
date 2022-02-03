@@ -11,8 +11,9 @@
         </nav>
 
         <div class="article-list">
+            <p v-if="searchArticle.length == 0 && this.keyword">キーワードに一致する記事はありません。</p>
             
-            <template v-if="isActive == 'スポーツ' && searchArticle.length == 0">
+            <template v-else-if="isActive == 'スポーツ' && searchArticle.length == 0">
                 <router-link class="card" v-for="article in sports" :to="article.url" :key="article.title">
                     <Article :article="article"></Article>
                 </router-link>
