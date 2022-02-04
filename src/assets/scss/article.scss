@@ -42,6 +42,10 @@
         font-weight: bold;
     }
 }
+.calculation-select__result {
+    color: $mainColor;
+    font-weight: bold;
+}
 @media screen and (max-width: 580px) {
     .calculation {
         padding: 30px 18px;
