@@ -31,8 +31,8 @@ export default {
   mixins: [ getTitle, articles ],
   data () {
     return {
-      num1: 0,
-      num2: 0,
+      num1: Number,
+      num2: Number,
       formList: [
             { label: "体重kg", data: 'num1', step: '0.1' },
             { label: "身長cm", data: 'num2', step: '0.1' }
