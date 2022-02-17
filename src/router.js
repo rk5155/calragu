@@ -41,7 +41,7 @@ export default new Router({
     {
       path: '/baseball',
       component: Baseball,
-      meta: { title: '現代野球における指標の自動計算', desc: '現代野球において、選手を評価する指標があります。野球におけるいろいろな指標の自動計算方法をまとめました。' }
+      meta: { title: '【現代野球における指標の自動計算まとめ】', desc: '現代野球において、選手を評価する指標があります。野球におけるいろいろな指標の自動計算方法をまとめました。' }
     },
     {
       path: '/health',
